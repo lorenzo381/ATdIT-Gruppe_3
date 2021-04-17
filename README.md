@@ -27,8 +27,8 @@ Fehlerbehandlung
 
 PROTOTYP:
 
-Abgrenzung des Scopes --> Mitarbeitsnoten durch Qualität und Quantität der Meldungen
-Beschreibung des Umfangs
+Abgrenzung des Scopes --> Mitarbeitsnoten durch Qualität und Quantität der Meldungen (Maxim)
+Beschreibung des Umfangs (Maxim)
 Prototyp UI per PowerPoint (Luca)
 
 
