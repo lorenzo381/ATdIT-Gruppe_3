@@ -1,6 +1,53 @@
 # ATdIT-Gruppe_3
 Bibliothek IBAIT 2020
 
+Meeting 17.04.21
+
+insgesamt: Meilensteine ausformulieren --> SMART Goals
+
+THEMA:
+
+Wissenschaftliche Grundlage z.B Statistiken, Literatur (Jonas)
+Auswahl eines Tools zur Selbstorganisation (Luca, Lara) z.B. SCRUM, KANBAS,
+Erfassung, Entwicklung und Darstellung der in der Themenstellung "Berufe" enthaltenen Fragen ("Digitalisierung und Gesellschaft") (Lara)
+
+
+
+DEVELOPMENT:
+
+maven and github (Marco)
+EPK-Diagramm (Maxim)
+Beschreibung des Programmierstils
+
+
+DOKUMENTATION: 
+Verantwortlichkeit des Programmiers
+Fehlerbehandlung
+
+
+PROTOTYP:
+
+Abgrenzung des Scopes --> Mitarbeitsnoten durch Qualität und Quantität der Meldungen (Maxim)
+Beschreibung des Umfangs (Maxim)
+Prototyp UI per PowerPoint (Luca)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Meeting 14.04.21
 
