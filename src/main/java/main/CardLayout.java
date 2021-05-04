@@ -1,5 +1,5 @@
 package GUI;
-
+//Kommentar
 import java.awt.*;
 import javax.swing.*;
 
