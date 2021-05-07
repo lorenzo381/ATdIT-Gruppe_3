@@ -9,9 +9,9 @@ public class OralGrade implements Grade {
     private int value;
     private Date date;
 
-    public OralGrade(int value, Date date) {
+    public OralGrade(int value) {
         this.value = value;
-        this.date = date;
+        this.date = new Date();
     }
 
     @Override

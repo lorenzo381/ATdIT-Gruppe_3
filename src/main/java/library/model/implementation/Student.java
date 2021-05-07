@@ -10,7 +10,6 @@ public class Student implements Person {
 
     private final int id;
     private final String name;
-    private Date birthday;
     private String courseName;
     private int missedDays;
     private WrittenGrade[] WrittenGrades;
@@ -20,10 +19,9 @@ public class Student implements Person {
     //students' id space
     public static int nextId = 0;
 
-    public Student(int id, String name, Date birthday, String courseName) {
+    public Student(String name) {
         this.id = nextId++;
         this.name = name;
-        this.birthday = birthday;
         this.courseName = courseName;
         this.missedDays = 0;
     }
@@ -36,11 +34,6 @@ public class Student implements Person {
     @Override
     public String getName() {
         return this.name;
-    }
-
-    @Override
-    public String getBirthday() {
-        return this.birthday.toString();
     }
 
     public String getCourseName() {
@@ -62,6 +55,7 @@ public class Student implements Person {
     public int getFrequency() {
         return this.frequency;
     }
+
     @Override
     public int hashCode()
     {

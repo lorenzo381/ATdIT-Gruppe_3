@@ -5,8 +5,4 @@ public interface Person {
     int getId();
 
     String getName();
-
-    String getBirthday();
-
-
 }

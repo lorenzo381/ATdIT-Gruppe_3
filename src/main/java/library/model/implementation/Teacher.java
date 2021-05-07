@@ -10,15 +10,13 @@ public class Teacher implements Person {
 
     private final int id;
     private final String name;
-    private Date birthday;
 
     //teachers' id space >1000
     public static int nextId = 1000;
 
-    public Teacher(String name, Date birthday) {
+    public Teacher(String name) {
         this.id = nextId++;
         this.name = name;
-        this.birthday = birthday;
     }
 
 
@@ -30,11 +28,6 @@ public class Teacher implements Person {
     @Override
     public String getName() {
         return this.name;
-    }
-
-    @Override
-    public String getBirthday() {
-        return this.birthday.toString();
     }
 
     @Override

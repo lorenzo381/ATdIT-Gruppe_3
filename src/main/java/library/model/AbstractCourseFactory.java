@@ -1,8 +1,8 @@
 package library.model;
 
-import java.util.Date;
+import library.model.implementation.Teacher;
 
-public interface AbstractCourseFactory {
+public abstract class AbstractCourseFactory {
 
     public static AbstractCourseFactory defaultInstance;
 
@@ -12,7 +12,7 @@ public interface AbstractCourseFactory {
         return defaultInstance;
     }
 
-    public abstract Course makeCourse();
-    public abstract Person makePerson(String name, Date birtbday);
-    public abstract Grade makeGrade();
+    public abstract Person makeStudent(String name);
+    public abstract Person makeTeacher(String name);
+    public abstract Grade makeGrade(int value);
 }
