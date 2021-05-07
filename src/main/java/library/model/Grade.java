@@ -1,6 +1,6 @@
 package library.model;
 
-public interface grade {
+public interface Grade {
 
     int getValue();
 

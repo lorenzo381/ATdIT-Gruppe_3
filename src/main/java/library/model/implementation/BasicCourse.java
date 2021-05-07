@@ -1,9 +1,9 @@
 package library.model.implementation;
 
-import library.model.person;
-import library.model.course;
+import library.model.Person;
+import library.model.Course;
 
 import java.util.ArrayList;
 
-public class BasicCourse extends ArrayList<person> implements course {
+public class BasicCourse extends ArrayList<Person> implements Course {
 }

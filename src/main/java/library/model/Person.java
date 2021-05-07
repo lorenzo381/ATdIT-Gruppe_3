@@ -1,6 +1,6 @@
 package library.model;
 
-public interface person {
+public interface Person {
 
     int getId();
 

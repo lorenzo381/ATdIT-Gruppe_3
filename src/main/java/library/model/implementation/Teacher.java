@@ -1,12 +1,12 @@
 package library.model.implementation;
 
-import library.model.person;
+import library.model.Person;
 
 import java.util.Date;
 
 import java.util.Objects;
 
-public class teacher implements person {
+public class Teacher implements Person {
 
     private final int id;
     private final String name;
@@ -15,7 +15,7 @@ public class teacher implements person {
     //teachers' id space >1000
     public static int nextId = 1000;
 
-    public teacher(String name, Date birthday) {
+    public Teacher(String name, Date birthday) {
         this.id = nextId++;
         this.name = name;
         this.birthday = birthday;

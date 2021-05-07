@@ -1,17 +1,15 @@
 package library.model.implementation;
 
-import library.model.grade;
+import library.model.Grade;
 
 import java.util.Date;
 
-import java.util.Objects;
-
-public class oralGrade implements grade {
+public class OralGrade implements Grade {
 
     private int value;
     private Date date;
 
-    public oralGrade(int value, Date date) {
+    public OralGrade(int value, Date date) {
         this.value = value;
         this.date = date;
     }
