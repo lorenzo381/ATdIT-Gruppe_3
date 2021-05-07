@@ -12,8 +12,8 @@ public class Student implements Person {
     private final String name;
     private String courseName;
     private int missedDays;
-    private WrittenGrade[] WrittenGrades;
-    private OralGrade[] OralGrades;
+    private WrittenGrade[] writtenGrades;
+    private OralGrade[] oralGrades;
     private int frequency;
 
     //students' id space
@@ -24,6 +24,9 @@ public class Student implements Person {
         this.name = name;
         this.courseName = courseName;
         this.missedDays = 0;
+        this.writtenGrades = new WrittenGrade[100];
+        this.oralGrades = new OralGrade[100];
+        this.frequency = 0;
     }
 
     @Override
@@ -40,6 +43,10 @@ public class Student implements Person {
         return this.courseName;
     }
 
+    public void addToCourse( String CourseName ) {
+        this.courseName = courseName;
+    }
+
     public void addMissedDay() {
         this.missedDays++;
     }
@@ -54,6 +61,10 @@ public class Student implements Person {
 
     public int getFrequency() {
         return this.frequency;
+    }
+
+    public void resetFrequency() {
+        this.frequency = 0;
     }
 
     @Override
