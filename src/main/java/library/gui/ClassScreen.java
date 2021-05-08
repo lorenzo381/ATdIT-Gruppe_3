@@ -1,6 +1,7 @@
 package library.gui;
 import javax.swing.*;
 import java.awt.*;
+import java.util.ResourceBundle;
 
 
 public class ClassScreen extends JFrame{
@@ -45,11 +46,11 @@ public class ClassScreen extends JFrame{
     Color gr = new Color(0,60,0);
 
 
-
+private ResourceBundle resourcebundle=ResourceBundle.getBundle("presentation");
 
     public ClassScreen(){
         setExtendedState(MAXIMIZED_BOTH);
-        setTitle("ClassScreen");
+        setTitle(resourcebundle.getString("ClassScreen"));
         setUndecorated(true);
         pane = getContentPane();
         pane.setLayout(new GridLayout(1,8));
@@ -60,7 +61,7 @@ public class ClassScreen extends JFrame{
         exitJP = new JPanel(new FlowLayout());
         exitJP.setBackground(Color.white);
         CloseClassScreenListener closeClassScreenListener = new CloseClassScreenListener(this);
-        exitClassJB= new JButton("Exit Class");
+        exitClassJB= new JButton(resourcebundle.getString("Exit Class"));
         exitClassJB.addActionListener(closeClassScreenListener);
         exitClassJB.setBackground(Color.green);
         exitClassJB.setPreferredSize(new Dimension(130,40));
@@ -169,7 +170,7 @@ public class ClassScreen extends JFrame{
             third.add(whiteJL);
         }
 
-        teacherJL = new JLabel("Teacher", JLabel.CENTER);
+        teacherJL = new JLabel(resourcebundle.getString("Teacher"), JLabel.CENTER);
         teacherJL.setForeground(Color.white);
         teacherJL.setBackground(Color.darkGray);
         teacherJL.setOpaque(true);
@@ -178,7 +179,7 @@ public class ClassScreen extends JFrame{
         thirdwhiteBoardJL.setOpaque(true);
 
         bord2 = new JPanel(new GridLayout(2,1));
-        greenboardJL = new JLabel("BOARD", JLabel.CENTER);
+        greenboardJL = new JLabel(resourcebundle.getString("Board"),JLabel.CENTER);
         greenboardJL.setForeground(Color.white);
         greenboardJL.setBackground(gr);
         greenboardJL.setOpaque(true);
@@ -257,7 +258,7 @@ public class ClassScreen extends JFrame{
         seventhwhiteBoardJL = new JLabel("");
         seventhwhiteBoardJL.setBackground(Color.white);
         seventhwhiteBoardJL.setOpaque(true);
-        absentJL = new JLabel("Abwesend: ", JLabel.RIGHT);
+        absentJL = new JLabel(resourcebundle.getString("absent"), JLabel.RIGHT);
         absentJL.setForeground(Color.red);
         absentJL.setBackground(Color.white);
         absentJL.setOpaque(true);
@@ -292,7 +293,7 @@ public class ClassScreen extends JFrame{
         absentNamesJL.setBackground(gr);
         absentNamesJL.setOpaque(true);
         lbl2 = new JLabel( "");
-        timerHeadline = new JLabel("TIME LEFT:", JLabel.CENTER);
+        timerHeadline = new JLabel(resourcebundle.getString("Time left"), JLabel.CENTER);
         timerHeadline.setBackground(gr);
         timerHeadline.setOpaque(true);
 

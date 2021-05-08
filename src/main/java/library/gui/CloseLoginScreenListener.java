@@ -3,6 +3,7 @@ package library.gui;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ResourceBundle;
 
 class CloseLoginScreenListener implements ActionListener {
 
@@ -12,21 +13,23 @@ class CloseLoginScreenListener implements ActionListener {
 LogInScreen logInScreen;
 ClassScreen classScreen;
 
+    ResourceBundle resourcebundle=ResourceBundle.getBundle("presentation");
+
     public CloseLoginScreenListener(LogInScreen loginScreen,JPasswordField passwordField, JTextField textField) {
         this.textField = textField;
         this.passwordField = passwordField;
         this.logInScreen = loginScreen;
 
-        System.out.println("Hier: " + passwordString);
+        System.out.println(resourcebundle.getString("here") + passwordString);
 
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println("passwordString");
+        System.out.println(resourcebundle.getString("passwordString"));
         this.passwordString = new String(passwordField.getPassword());
-        if (passwordString.equals("Password")) {
-            System.out.println("succesful"); // hier hätte ich gerne eine kurze Verzögerung
+        if (passwordString.equals("ClassScreen")) {
+            System.out.println(resourcebundle.getString(("successful"))); // hier hätte ich gerne eine kurze Verzögerung
             logInScreen.closeFrame();
             classScreen = new ClassScreen();
 
