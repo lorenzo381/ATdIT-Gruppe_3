@@ -1,9 +1,8 @@
 package library.gui;
-import java.awt.event.ActionEvent;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
 
 public class StudentGradeWindow extends JFrame {
 
@@ -38,6 +37,32 @@ public class StudentGradeWindow extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 closeFrame();
                 jb.setBackground(null);
+
+                if(veryWellJRB.isSelected()) {
+                    System.out.println("VeryWell");
+
+
+                }
+
+                else if (wellJRB.isSelected()) {
+                    System.out.println("Well");
+
+                }
+
+                else if (acceptableJRB.isSelected()) {
+                    System.out.println("acceptable");
+
+                }
+
+                else if (notEnoughJRB.isSelected()) {
+                    System.out.println("not enough");
+
+                }
+
+                else {
+                    System.out.println("nothing");
+
+                }
 
             }
         };
