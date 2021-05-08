@@ -1,6 +1,6 @@
-package library.persistence.implementation;
-import library.persistence.Service;
-import library.DBConnect;
+/*package library.persistence.implementation;
+//import library.persistence.Service;
+//import library.DBConnect;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,7 @@ public class DatabaseREAD implements Service {
         String sql = "SELECT note FROM register";
         try /*(Connection connection = DBConnect.connect();
             Statement statement = connection.createStatement();
-            ResultSet result = statement.executeQuery(sql))*/ {
+            ResultSet result = statement.executeQuery(sql)) {
             Connection connection = DBConnect.connect();
             Statement statement = connection.createStatement();
             ResultSet result = statement.executeQuery(sql);    //Methode zur Abfrage der einzelnen Informationen aus der Datenbank
@@ -28,7 +28,7 @@ public class DatabaseREAD implements Service {
                 residentArrayList.add(resident);
                 result.next();
             }
-            */
+
         }catch (SQLException e){
             System.out.println(e);
         }
@@ -49,4 +49,5 @@ public class DatabaseREAD implements Service {
         }else
             System.out.println("fail");
     }
-}
+
+        } */

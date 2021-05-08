@@ -2,14 +2,16 @@ package library.model.implementation;
 
 import library.model.Person;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import java.util.Objects;
 
 public class Student implements Person {
 
-    private final int id;
-    private final String name;
+    private /*final*/ int id;
+    private /*final*/ String name;
     private String courseName;
     private int missedDays;
     private WrittenGrade[] writtenGrades;
@@ -27,6 +29,35 @@ public class Student implements Person {
         this.writtenGrades = new WrittenGrade[100];
         this.oralGrades = new OralGrade[100];
         this.frequency = 0;
+    }
+
+    public Student() {
+
+
+    }
+public Student(int id, String name, String courseName, int missedDays){
+        this.id = id;
+        this.name = name;
+        this.courseName = courseName;
+        this.missedDays = missedDays;
+}
+    public void setId(int id) {
+        this.id = id;
+
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
+    public void setMissedDays(int missedDays) {
+        this.missedDays = missedDays;
     }
 
     @Override
@@ -68,8 +99,7 @@ public class Student implements Person {
     }
 
     @Override
-    public int hashCode()
-    {
+    public int hashCode() {
         return Objects.hash(id);
     }
 }
