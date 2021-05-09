@@ -28,7 +28,7 @@ public class LogInScreen extends JFrame {
         c = new GridBagConstraints();
 
 
-        /*______________________________________________________________________0.Reihe_____________________________________*/
+        /*________________________________________________________________0.Reihe_____________________________________*/
 
         thirdRowLeftJL = new JLabel();
         thirdRowLeftJL.setBackground(Color.white);
@@ -46,7 +46,7 @@ public class LogInScreen extends JFrame {
 
 
 
-        /*___________________________________________1. Reihe Mit Logo__________________________________________________________________________*/
+        /*___________________________________________1. Reihe Mit Logo________________________________________________*/
         thirdRowLeftJL = new JLabel();
         thirdRowLeftJL.setLayout(new BorderLayout());
         thirdRowLeftJL.setBackground(Color.white);
@@ -58,7 +58,6 @@ public class LogInScreen extends JFrame {
         pane.add(thirdRowLeftJL, c);
 
 
-        //iconJL = new JLabel();
         account = new ImageIcon(new File("./resources/account.png").getPath());
 
         account.setImage(account.getImage().getScaledInstance(225, 225, Image.SCALE_DEFAULT));
@@ -86,7 +85,7 @@ public class LogInScreen extends JFrame {
         pane.add(thirdRowLeftJL, c);
 
 
-        /*___________________________________________ 2 Reihe mit Feldern______________________________________________________________________________*/
+        /*___________________________________________ 2 Reihe mit Feldern_____________________________________________*/
 
         thirdRowLeftJL = new JLabel();
         thirdRowLeftJL.setBackground(Color.white);
@@ -143,7 +142,7 @@ public class LogInScreen extends JFrame {
         c.ipady = 200;
         pane.add(thirdRowLeftJL, c);
 
-        /*_________________________________________3. Reihe____________________________________________________________*/
+        /*_________________________________________3. Reihe___________________________________________________________*/
         thirdRowLeftJL = new JLabel();
         thirdRowLeftJL.setBackground(Color.white);
         c.fill = GridBagConstraints.HORIZONTAL;
@@ -183,7 +182,7 @@ public class LogInScreen extends JFrame {
         c.ipady = 200;
         pane.add(thirdRowLeftJL, c);
 
-        /*___________________________________________4. Reihe______________________________________________________________*/
+        /*___________________________________________4. Reihe_________________________________________________________*/
         fourthRowLeftJL = new JLabel();
         fourthRowLeftJL.setPreferredSize(new Dimension(10, 10));
         fourthRowLeftJL.setBackground(Color.white);
