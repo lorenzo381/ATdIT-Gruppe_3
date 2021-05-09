@@ -2,24 +2,59 @@ package library.gui;
 import javax.swing.*;
 import java.awt.*;
 
-public class StudentOverviewScreen extends JFrame{
+public class StudentOverviewScreen extends JFrame {
 
     Container pane;
+    JPanel idJP, familynameJP, firstnameJP, missedDaysJP, qualityJP ,quantityJP ,gradeJP, homeworkJP;
+
     public StudentOverviewScreen() {
         setExtendedState(Frame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
         setTitle("StudentOverview");
-        setSize(1395,900);
+        //setUndecorated(true);
+
         pane = getContentPane();
-        pane.setLayout(new GridLayout());
+        pane.setLayout(new GridLayout(1,7));
+
+
+        idJP = new JPanel(new GridLayout(20,1));
+        idJP.setBackground(Color.white);
+        pane.add(idJP);
+
+        familynameJP = new JPanel(new GridLayout(20,1));
+        familynameJP.setBackground(Color.white);
+        pane.add(familynameJP);
+
+        firstnameJP = new JPanel(new GridLayout(20,1));
+        firstnameJP.setBackground(Color.white);
+        pane.add(firstnameJP);
+
+        missedDaysJP = new JPanel(new GridLayout(20,1));
+        missedDaysJP.setBackground(Color.white);
+        pane.add(missedDaysJP);
+
+        qualityJP = new JPanel(new GridLayout(20,1));
+        qualityJP.setBackground(Color.white);
+        pane.add(qualityJP);
+
+        quantityJP = new JPanel(new GridLayout(20,1));
+        quantityJP.setBackground(Color.white);
+        pane.add(quantityJP);
+
+        gradeJP = new JPanel(new GridLayout(20,1));
+        gradeJP.setBackground(Color.white);
+        pane.add(gradeJP);
+
+        homeworkJP = new JPanel(new GridLayout(20,1));
+        homeworkJP.setBackground(Color.white);
+        pane.add(homeworkJP);
+
         setVisible(true);
     }
 
-    public static void main (String [] args) {
+    public static void main(String[] args) {
         StudentOverviewScreen so = new StudentOverviewScreen();
-        so.setVisible(true);
-        so.setTitle("ClassScreen");
-        so.setSize(1395,900);
+
+
     }
 }

@@ -6,7 +6,7 @@ import java.io.File;
 
 
 public class LogInScreen extends JFrame {
-    JButton submitJB, buttonlogin;
+    JButton submitJB;
     JPasswordField passwordField;
     JTextField usernameField;
     JLabel thirdRowLeftJL, passwordJL, usernameJL, fourthRowLeftJL;
@@ -14,7 +14,6 @@ public class LogInScreen extends JFrame {
     GridBagConstraints c;
     ImageIcon account;
     JPanel textJP, boxJP, combinedJP, thirdRowSubmitJP;
-    ClassScreen cs;
 
 
     public LogInScreen() {
