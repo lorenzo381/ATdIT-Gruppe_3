@@ -20,7 +20,7 @@ public class LogInScreen extends JFrame {
        setExtendedState(Frame.MAXIMIZED_BOTH);
         setTitle("LogInScreen");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setUndecorated(true);
+       // setUndecorated(true);
 
         pane = getContentPane();
         pane.setBackground(Color.white);
@@ -58,7 +58,7 @@ public class LogInScreen extends JFrame {
         pane.add(thirdRowLeftJL, c);
 
 
-        account = new ImageIcon(new File("./resources/account.png").getPath());
+        account = new ImageIcon(new File("./src/main/resources/account.png").getPath());
 
         account.setImage(account.getImage().getScaledInstance(225, 225, Image.SCALE_DEFAULT));
         thirdRowLeftJL = new JLabel(account, JLabel.CENTER);
