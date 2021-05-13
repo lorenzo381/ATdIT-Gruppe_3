@@ -4,7 +4,8 @@ public class StudentData {
 
     private /*final*/ int id;
     private /*final*/ String password;
-    private /*final*/ String name;
+    private /*final*/ String firstname;
+    private /*final*/ String lastname;
     private String courseName;
     private int missedDays;
     private double averageGrade;
@@ -13,28 +14,31 @@ public class StudentData {
     //students' id space
     public static int nextId = 0;
 
-    public StudentData(String password, String name) {
+    public StudentData(String password, String lastname, String firstname) {
         this.id = nextId++;
         this.password = password;
-        this.name = name;
+        this.lastname = lastname;
+        this.firstname = firstname;
         this.courseName = courseName;
         this.missedDays = 0;
         this.frequency = 0;
     }
 
-    public StudentData(String password, String name, String courseName) {
-            this.id = nextId++;
-            this.password = password;
-            this.name = name;
-            this.courseName = courseName;
-            this.missedDays = 0;
-            this.frequency = 0;
+    public StudentData(String password, String lastname, String firstname, String courseName) {
+        this.id = nextId++;
+        this.password = password;
+        this.lastname = lastname;
+        this.firstname = firstname;
+        this.courseName = courseName;
+        this.missedDays = 0;
+        this.frequency = 0;
     }
 
-    public StudentData(int id, String name, String courseName, int missedDays) {
+    public StudentData(int id, String lastname, String firstname, String courseName, int missedDays) {
         this.id = id;
         this.password = password;
-        this.name = name;
+        this.lastname = lastname;
+        this.firstname = firstname;
         this.courseName = courseName;
         this.missedDays = missedDays;
         this.frequency = 0;
@@ -48,8 +52,13 @@ public class StudentData {
         this.id = id;
 
     }
-    public void setName(String name) {
-        this.name = name;
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
     public void setCourseName(String courseName) {
@@ -80,8 +89,12 @@ public class StudentData {
         return this.password;
     }
 
-    public String getName() {
-        return this.name;
+    public String getLastname() {
+        return this.lastname;
+    }
+
+    public String getFirstname() {
+        return this.firstname;
     }
 
     public String getCourseName() {

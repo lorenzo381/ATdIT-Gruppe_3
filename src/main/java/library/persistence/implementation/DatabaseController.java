@@ -21,14 +21,15 @@ public class DatabaseController {
         return conn;
     }
 
-    public static void tabelleanlegen() {            //Datenbank kreieren
+    public static void createTable() {            //Datenbank kreieren
 
         String sql = """
                 CREATE TABLE IF NOT EXISTS student (     
                 	id integer PRIMARY KEY,
-                	name text NOT NULL,
-                	
-                	courseName text,
+                	lastname text NOT NULL,
+                	firstname text NOT NULL,
+                	frequency integer NOT NULL,
+                    courseName text NOT NULL,
                 	missedDays integer                             
                 	
                 );""";
@@ -52,7 +53,7 @@ public class DatabaseController {
     }
 
     public static StudentData get(int id) {
-        String sql = "SELECT id, name, courseName, missedDays FROM student WHERE id = ?";
+        String sql = "SELECT id, lastname, firstname, frequency, courseName, missedDays FROM student WHERE id = ?";
         Connection conn = connect();
         StudentData rueckgabestudent = new StudentData();
 
@@ -65,7 +66,9 @@ public class DatabaseController {
             if (rs.next()) {
 
                 rueckgabestudent.setId(rs.getInt("id"));
-                rueckgabestudent.setName(rs.getString("name"));
+                rueckgabestudent.setLastname(rs.getString("lastname"));
+                rueckgabestudent.setFirstname(rs.getString("firstname"));
+                rueckgabestudent.setFrequency(rs.getInt("frequency"));
                 rueckgabestudent.setCourseName(rs.getString("courseName"));
                 rueckgabestudent.setMissedDays(rs.getInt("missedDays"));
 
@@ -79,15 +82,17 @@ public class DatabaseController {
     }
 
     public static void createStudent(Student student) {    // Submit Button Vorlage für Note in Datenbankeintrag übertragen
-        String sql = "INSERT INTO student(id, name, courseName, missedDays) VALUES(?,?,?,?)";
+        String sql = "INSERT INTO student(id, lastname, firstname, frequency, courseName, missedDays) VALUES(?,?,?,?,?,?)";
 
         Connection conn = connect();
         try {
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, student.getId());
-            pstmt.setString(2, student.getName());
-            pstmt.setString(3, student.getCourseName());
-            pstmt.setInt(4, student.getMissedDays());
+            pstmt.setString(2, student.getLastname());
+            pstmt.setString(3, student.getFirstname());
+            pstmt.setInt(4, student.getFrequency());
+            pstmt.setString(5, student.getCourseName());
+            pstmt.setInt(6, student.getMissedDays());
 
             pstmt.executeUpdate();
 
