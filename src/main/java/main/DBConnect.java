@@ -62,7 +62,7 @@ public class DBConnect {
     public static Student get(int id) {
         String sql = "SELECT id, name, courseName, missedDays FROM student WHERE id = ?";
         Connection conn = connect();
-        Student rueckgabestudent = new Student();
+        //Student rueckgabestudent = new Student();
 
 
         try {
@@ -72,10 +72,10 @@ public class DBConnect {
 
             while (rs.next()) {
 
-                rueckgabestudent.setId(rs.getInt("id"));
+               /* rueckgabestudent.setId(rs.getInt("id"));
                 rueckgabestudent.setName(rs.getString("name"));
                 rueckgabestudent.setCourseName(rs.getString("courseName"));
-                rueckgabestudent.setMissedDays(rs.getInt("missedDays"));
+                rueckgabestudent.setMissedDays(rs.getInt("missedDays"));*/
 
             }
         } catch (SQLException e) {
@@ -83,7 +83,8 @@ public class DBConnect {
 
 
         }
-        return rueckgabestudent;
+       // return rueckgabestudent;
+        return null;
     }
 
     public static void createStudent(Student student) {    // Submit Button Vorlage für Note in Datenbankeintrag übertragen
