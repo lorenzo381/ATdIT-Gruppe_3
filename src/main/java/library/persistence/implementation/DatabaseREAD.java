@@ -1,6 +1,6 @@
 /*package library.persistence.implementation;
 //import library.persistence.Service;
-//import library.DBConnect;
+//import library.DatabaseController;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,10 +9,10 @@ public class DatabaseREAD implements Service {
     public static List<register> getRegister() throws ServiceException{
         ArrayList<register> registerArrayList = new ArrayList<register>();
         String sql = "SELECT note FROM register";
-        try /*(Connection connection = DBConnect.connect();
+        try /*(Connection connection = DatabaseController.connect();
             Statement statement = connection.createStatement();
             ResultSet result = statement.executeQuery(sql)) {
-            Connection connection = DBConnect.connect();
+            Connection connection = DatabaseController.connect();
             Statement statement = connection.createStatement();
             ResultSet result = statement.executeQuery(sql);    //Methode zur Abfrage der einzelnen Informationen aus der Datenbank
             System.out.println(result.getInt("note"));
