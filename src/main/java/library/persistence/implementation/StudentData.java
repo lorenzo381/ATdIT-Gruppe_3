@@ -1,63 +1,47 @@
-package library.model.implementation;
+package library.persistence.implementation;
 
-import library.model.Person;
-import library.persistence.implementation.StudentData;
-
-import java.util.Objects;
-
-public class Student implements Person {
+public class StudentData {
 
     private /*final*/ int id;
     private /*final*/ String password;
     private /*final*/ String name;
     private String courseName;
     private int missedDays;
-    private OralGrade[] oralGrades;
     private double averageGrade;
     private int frequency;
 
     //students' id space
     public static int nextId = 0;
 
-    public Student(StudentData studentData) {
-        this.id = nextId++;
-        this.password = studentData.getPassword();
-        this.name = studentData.getName();
-/*      TODO: Fix that
-        this.courseName = courseName;
-        this.missedDays = 0;
-        this.oralGrades = new OralGrade[100];
-        this.frequency = 0;*/
-    }
-
-    public Student(String password, String name) {
+    public StudentData(String password, String name) {
         this.id = nextId++;
         this.password = password;
         this.name = name;
         this.courseName = courseName;
         this.missedDays = 0;
-        this.oralGrades = new OralGrade[100];
         this.frequency = 0;
     }
 
-    public Student(String password, String name, String courseName) {
+    public StudentData(String password, String name, String courseName) {
             this.id = nextId++;
             this.password = password;
             this.name = name;
             this.courseName = courseName;
             this.missedDays = 0;
-            this.oralGrades = new OralGrade[100];
             this.frequency = 0;
     }
 
-    public Student(int id, String name, String courseName, int missedDays) {
+    public StudentData(int id, String name, String courseName, int missedDays) {
         this.id = id;
         this.password = password;
         this.name = name;
         this.courseName = courseName;
         this.missedDays = missedDays;
-        this.oralGrades = new OralGrade[100];
         this.frequency = 0;
+    }
+
+    public StudentData() {
+
     }
 
     public void setId(int id) {
@@ -88,17 +72,14 @@ public class Student implements Person {
         this.frequency++;
     }
 
-    @Override
     public int getId() {
         return this.id;
     }
 
-    @Override
     public String getPassword() {
         return this.password;
     }
 
-    @Override
     public String getName() {
         return this.name;
     }
@@ -111,22 +92,6 @@ public class Student implements Person {
         return this.missedDays;
     }
 
-    public int[] getOralGrades() {
-        int[] grades = new int[this.oralGrades.length];
-        for(int i = 0; i < this.oralGrades.length;  i++) {
-            grades[i] = oralGrades[i].getValue();
-        }
-        return grades;
-    }
-
-    public double getAverageGrade() {
-        double sum = 0;
-        for(int i = 0; i < this.oralGrades.length;  i++) {
-            sum += oralGrades[i].getValue();
-        }
-        return (double) sum/this.oralGrades.length;
-    }
-
     public int getFrequency() {
         return this.frequency;
     }
@@ -137,10 +102,5 @@ public class Student implements Person {
 
     public void resetFrequency() {
         this.frequency = 0;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
     }
 }

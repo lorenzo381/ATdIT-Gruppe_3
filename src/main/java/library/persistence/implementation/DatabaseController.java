@@ -1,13 +1,13 @@
-package main;
+package library.persistence.implementation;
 // Schnitstelle zwischen Datenbank und rest des Programms von uns
 
 import library.model.implementation.Student;
 
 import java.sql.*;
 
-public class DBConnect {
+public class DatabaseController {
 
-    public static final String location = "jdbc:sqlite:src/main/java/library/Database/db.sqlite";
+    public static final String location = "jdbc:sqlite:src/main/resources/database/db.sqlite";
 
     public static Connection connect() {
 
@@ -19,14 +19,6 @@ public class DBConnect {
             System.out.println(e.getMessage());
         }
         return conn;
-    }
-
-    public static void main(String[] args) {
-
-        tabelleanlegen();
-        createStudent(new Student(1, "Heribert", "prog5", 27 ));
-        Student unserStudent = get(1);
-        System.out.println("A");
     }
 
     public static void tabelleanlegen() {            //Datenbank kreieren
@@ -59,10 +51,10 @@ public class DBConnect {
 
     }
 
-    public static Student get(int id) {
+    public static StudentData get(int id) {
         String sql = "SELECT id, name, courseName, missedDays FROM student WHERE id = ?";
         Connection conn = connect();
-        //Student rueckgabestudent = new Student();
+        StudentData rueckgabestudent = new StudentData();
 
 
         try {
@@ -70,12 +62,12 @@ public class DBConnect {
             pstmt.setInt(1, id);
             ResultSet rs = pstmt.executeQuery();
 
-            while (rs.next()) {
+            if (rs.next()) {
 
-               /* rueckgabestudent.setId(rs.getInt("id"));
+                rueckgabestudent.setId(rs.getInt("id"));
                 rueckgabestudent.setName(rs.getString("name"));
                 rueckgabestudent.setCourseName(rs.getString("courseName"));
-                rueckgabestudent.setMissedDays(rs.getInt("missedDays"));*/
+                rueckgabestudent.setMissedDays(rs.getInt("missedDays"));
 
             }
         } catch (SQLException e) {
@@ -83,8 +75,7 @@ public class DBConnect {
 
 
         }
-       // return rueckgabestudent;
-        return null;
+        return rueckgabestudent;
     }
 
     public static void createStudent(Student student) {    // Submit Button Vorlage für Note in Datenbankeintrag übertragen

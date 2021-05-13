@@ -40,7 +40,7 @@ public class LogInScreen extends JFrame {
 
   /*___________________________________________1. Reihe Mit Logo______________________________________________________*/
 
-  account = new ImageIcon(new File("./src/main/resources/account.png").getPath());
+  account = new ImageIcon(new File("./src/library.main/resources/account.png").getPath());
   addJl = new addJlToGridBackLayout();
   addJl.addJlWithIconHorizontalToGridBackLayout(pane,c,account,225,225,1,1,0.5,1,1,200,  Color.white);
 
