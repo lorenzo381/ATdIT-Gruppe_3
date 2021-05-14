@@ -16,6 +16,7 @@ public class Student implements Person {
     private OralGrade[] oralGrades;
     private double averageGrade;
     private int frequency;
+    private int grade;
 
     //students' id space
     public static int nextId = 0;
@@ -43,7 +44,8 @@ public class Student implements Person {
         this.oralGrades = new OralGrade[100];
         this.frequency = 0;
     }
-    public Student(String password, String lastName, String firstName, Integer frequency) {
+
+    public Student(String password, String lastName, String firstName, Integer frequency, int grade) {
         this.id = nextId++;
         this.password = password;
         this.lastName = lastName;
@@ -52,9 +54,10 @@ public class Student implements Person {
         this.missedDays = 0;
         this.oralGrades = new OralGrade[100];
         this.frequency = frequency;
+        this.grade = grade;
     }
 
-    public Student(String password, String lastName, String firstName, Integer frequency, String courseName) {
+    public Student(String password, String lastName, String firstName, Integer frequency, String courseName, int grade) {
         this.id = nextId++;
         this.password = password;
         this.lastName = lastName;
@@ -63,9 +66,10 @@ public class Student implements Person {
         this.missedDays = 0;
         this.oralGrades = new OralGrade[100];
         this.frequency = frequency;
+        this.grade = grade;
     }
 
-    public Student(int id, String lastName, String firstName, Integer frequency, String courseName, int missedDays) {
+    public Student(int id, String lastName, String firstName, Integer frequency, String courseName, Integer missedDays, Integer grade) {
         this.id = id;
         this.password = password;
         this.firstName = firstName;
@@ -74,6 +78,7 @@ public class Student implements Person {
         this.missedDays = missedDays;
         this.oralGrades = new OralGrade[100];
         this.frequency = frequency;
+        this.grade = grade;
     }
 
     public void setId(int id) {
@@ -84,7 +89,6 @@ public class Student implements Person {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -100,6 +104,10 @@ public class Student implements Person {
 
     public void setFrequency(int frequency) {
         this.frequency = frequency;
+    }
+
+    public void setGrade(int grade) {
+        this.grade = grade;
     }
 
     public void addMissedDay() {
@@ -138,25 +146,11 @@ public class Student implements Person {
         return this.missedDays;
     }
 
-    public int[] getOralGrades() {
-        int[] grades = new int[this.oralGrades.length];
-        for (int i = 0; i < this.oralGrades.length; i++) {
-            grades[i] = oralGrades[i].getValue();
-        }
-        return grades;
-    }
-
-    public double getAverageGrade() {
-        double sum = 0;
-        for (int i = 0; i < this.oralGrades.length; i++) {
-            sum += oralGrades[i].getValue();
-        }
-        return (double) sum / this.oralGrades.length;
-    }
-
     public int getFrequency() {
         return this.frequency;
     }
+
+    public int getGrade() { return this.grade;};
 
     public void resetMissedDays() {
         this.missedDays = 0;

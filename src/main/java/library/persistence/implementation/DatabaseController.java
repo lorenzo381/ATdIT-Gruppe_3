@@ -1,5 +1,5 @@
 package library.persistence.implementation;
-// Schnitstelle zwischen Datenbank und rest des Programms von uns
+// Interface for database functionality
 
 import library.model.implementation.Student;
 
@@ -30,7 +30,8 @@ public class DatabaseController {
                 	firstName text NOT NULL,
                 	frequency integer NOT NULL,
                     courseName text NOT NULL,
-                	missedDays integer                             
+                	missedDays integer,
+                	grade integer                             
                 	
                 );""";
         Connection conn = connect();
@@ -82,7 +83,7 @@ public class DatabaseController {
     }
 
     public static void createStudent(Student student) {    // Submit Button Vorlage für Note in Datenbankeintrag übertragen
-        String sql = "INSERT INTO student(id, lastName, firstName, frequency, courseName, missedDays) VALUES(?,?,?,?,?,?)";
+        String sql = "INSERT INTO student(id, lastName, firstName, frequency, courseName, missedDays, grade) VALUES(?,?,?,?,?,?,?)";
 
         Connection conn = connect();
         try {
@@ -93,6 +94,22 @@ public class DatabaseController {
             pstmt.setInt(4, student.getFrequency());
             pstmt.setString(5, student.getCourseName());
             pstmt.setInt(6, student.getMissedDays());
+            pstmt.setInt(7, student.getGrade());
+
+            pstmt.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public static void setGrade(int value) {
+        String sql = "INSERT INTO student(frequency, grade) VALUES(?,?) WHERE id='1'";
+
+        Connection conn = connect();
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(7, value);
 
             pstmt.executeUpdate();
 

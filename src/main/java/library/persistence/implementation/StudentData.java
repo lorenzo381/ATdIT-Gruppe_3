@@ -10,6 +10,7 @@ public class StudentData {
     private int missedDays;
     private double averageGrade;
     private int frequency;
+    private int grade;
 
     //students' id space
     public static int nextId = 0;
@@ -73,6 +74,10 @@ public class StudentData {
         this.frequency = frequency;
     }
 
+    public void setGrade(int grade) {
+        this.grade = grade;
+    }
+
     public void addMissedDay() {
         this.missedDays++;
     }
@@ -108,6 +113,8 @@ public class StudentData {
     public int getFrequency() {
         return this.frequency;
     }
+
+    public int getGrade() { return this.grade;};
 
     public void resetMissedDays() {
         this.missedDays = 0;
