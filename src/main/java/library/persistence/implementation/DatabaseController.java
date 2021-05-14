@@ -17,6 +17,7 @@ public class DatabaseController {
             System.out.println("Connection to Database established");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            System.out.println(" Connection to Database failed.");
         }
         return conn;
     }
@@ -47,6 +48,7 @@ public class DatabaseController {
             System.out.println(sql + " Befehl erfolgreich ausgeführt! ");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            System.out.println(" Execution failed.");
 
 
         }
@@ -76,6 +78,7 @@ public class DatabaseController {
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            System.out.println(" Getting student Data failed.");
 
 
         }
@@ -115,6 +118,7 @@ public class DatabaseController {
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+
         }
     }
 }
