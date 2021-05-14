@@ -5,6 +5,6 @@ public interface Person {
     int getId();
 
     String getPassword();
-    String getLastname();
-    String getFirstname();
+    String getLastName();
+    String getFirstName();
 }

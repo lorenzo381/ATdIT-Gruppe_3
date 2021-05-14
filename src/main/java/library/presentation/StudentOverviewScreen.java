@@ -5,7 +5,7 @@ import java.awt.*;
 public class StudentOverviewScreen extends JFrame {
 
     Container pane;
-    JPanel idJP, familynameJP, firstnameJP, missedDaysJP, qualityJP ,quantityJP ,gradeJP, homeworkJP;
+    JPanel idJP, familynameJP, firstNameJP, missedDaysJP, qualityJP ,quantityJP ,gradeJP, homeworkJP;
 
     public StudentOverviewScreen() {
         setExtendedState(Frame.MAXIMIZED_BOTH);
@@ -25,9 +25,9 @@ public class StudentOverviewScreen extends JFrame {
         familynameJP.setBackground(Color.white);
         pane.add(familynameJP);
 
-        firstnameJP = new JPanel(new GridLayout(20,1));
-        firstnameJP.setBackground(Color.white);
-        pane.add(firstnameJP);
+        firstNameJP = new JPanel(new GridLayout(20,1));
+        firstNameJP.setBackground(Color.white);
+        pane.add(firstNameJP);
 
         missedDaysJP = new JPanel(new GridLayout(20,1));
         missedDaysJP.setBackground(Color.white);

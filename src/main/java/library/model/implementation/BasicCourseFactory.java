@@ -7,13 +7,13 @@ import library.model.Person;
 public class BasicCourseFactory extends AbstractCourseFactory {
 
     @Override
-    public Person makeTeacher(String password, String lastname, String firstname) {
-        return new Teacher(password, lastname, firstname);
+    public Person makeTeacher(String password, String lastName, String firstName) {
+        return new Teacher(password, lastName, firstName);
     }
 
     @Override
-    public Person makeStudent(String password, String lastname, String firstname) {
-        return new Student(password, lastname, firstname);
+    public Person makeStudent(String password, String lastName, String firstName) {
+        return new Student(password, lastName, firstName);
     }
 
     @Override

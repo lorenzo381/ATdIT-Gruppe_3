@@ -9,8 +9,8 @@ public class Student implements Person {
 
     private /*final*/ int id;
     private /*final*/ String password;
-    private String firstname;
-    private /*final*/ String lastname;
+    private String firstName;
+    private /*final*/ String lastName;
     private String courseName;
     private int missedDays;
     private OralGrade[] oralGrades;
@@ -23,8 +23,8 @@ public class Student implements Person {
     public Student(StudentData studentData) {
         this.id = nextId++;
         this.password = studentData.getPassword();
-        this.lastname = studentData.getLastname();
-        this.firstname = studentData.getFirstname();
+        this.lastName = studentData.getLastName();
+        this.firstName = studentData.getFirstName();
 
 /*      TODO: Fix that
         this.courseName = courseName;
@@ -33,43 +33,43 @@ public class Student implements Person {
         this.frequency = 0;*/
     }
 
-    public Student(String password, String lastname, String firstname) {
+    public Student(String password, String lastName, String firstName) {
         this.id = nextId++;
         this.password = password;
-        this.lastname = lastname;
-        this.firstname = firstname;
+        this.lastName = lastName;
+        this.firstName = firstName;
         this.courseName = courseName;
         this.missedDays = 0;
         this.oralGrades = new OralGrade[100];
         this.frequency = 0;
     }
-    public Student(String password, String lastname, String firstname, Integer frequency) {
+    public Student(String password, String lastName, String firstName, Integer frequency) {
         this.id = nextId++;
         this.password = password;
-        this.lastname = lastname;
-        this.firstname = firstname;
+        this.lastName = lastName;
+        this.firstName = firstName;
         this.courseName = courseName;
         this.missedDays = 0;
         this.oralGrades = new OralGrade[100];
         this.frequency = frequency;
     }
 
-    public Student(String password, String lastname, String firstname, Integer frequency, String courseName) {
+    public Student(String password, String lastName, String firstName, Integer frequency, String courseName) {
         this.id = nextId++;
         this.password = password;
-        this.lastname = lastname;
-        this.firstname = firstname;
+        this.lastName = lastName;
+        this.firstName = firstName;
         this.courseName = courseName;
         this.missedDays = 0;
         this.oralGrades = new OralGrade[100];
         this.frequency = frequency;
     }
 
-    public Student(int id, String lastname, String firstname, Integer frequency, String courseName, int missedDays) {
+    public Student(int id, String lastName, String firstName, Integer frequency, String courseName, int missedDays) {
         this.id = id;
         this.password = password;
-        this.firstname = firstname;
-        this.lastname = lastname;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.courseName = courseName;
         this.missedDays = missedDays;
         this.oralGrades = new OralGrade[100];
@@ -81,13 +81,13 @@ public class Student implements Person {
 
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public void setCourseName(String courseName) {
@@ -121,12 +121,12 @@ public class Student implements Person {
     }
 
     @Override
-    public String getLastname() {
-        return this.lastname;
+    public String getLastName() {
+        return this.lastName;
     }
     @Override
-    public String getFirstname() {
-        return this.firstname;
+    public String getFirstName() {
+        return this.firstName;
     }
 
 

@@ -12,7 +12,7 @@ public abstract class AbstractCourseFactory {
         return defaultInstance;
     }
 
-    public abstract Person makeStudent(String password, String firstname, String lastname);
-    public abstract Person makeTeacher(String password, String lastname, String firstname);
+    public abstract Person makeStudent(String password, String firstName, String lastName);
+    public abstract Person makeTeacher(String password, String lastName, String firstName);
     public abstract Grade makeGrade(int value);
 }

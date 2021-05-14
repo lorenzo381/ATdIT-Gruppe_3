@@ -10,17 +10,17 @@ public class Teacher implements Person {
 
     private final int id;
     private final String password;
-    private String firstname;
-    private String lastname;
+    private String firstName;
+    private String lastName;
 
     //teachers' id space >1000
     public static int nextId = 1000;
 
-    public Teacher(String password, String lastname, String firstname) {
+    public Teacher(String password, String lastName, String firstName) {
         this.id = nextId++;
         this.password = password;
-        this.lastname = lastname;
-        this.firstname = firstname;
+        this.lastName = lastName;
+        this.firstName = firstName;
     }
 
 
@@ -35,13 +35,13 @@ public class Teacher implements Person {
     }
 
     @Override
-    public String getLastname() {
-        return this.getLastname();
+    public String getLastName() {
+        return this.getLastName();
     }
 
     @Override
-    public String getFirstname() {
-        return this.getFirstname();
+    public String getFirstName() {
+        return this.getFirstName();
     }
 
     @Override

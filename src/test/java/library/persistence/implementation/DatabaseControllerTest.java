@@ -15,8 +15,8 @@ public class DatabaseControllerTest {
         StudentData student = DatabaseController.get(1);
 
         assertEquals(student.getId(), 1);
-        assertEquals(student.getLastname(), "Isaak");
-        assertEquals(student.getFirstname(), "Luca");
+        assertEquals(student.getLastName(), "Isaak");
+        assertEquals(student.getFirstName(), "Luca");
         assertEquals(student.getFrequency(), 2);
         assertEquals(student.getCourseName(), "Programmieren");
         assertEquals(student.getMissedDays(), 2);

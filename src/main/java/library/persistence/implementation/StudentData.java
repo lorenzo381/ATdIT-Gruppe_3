@@ -4,8 +4,8 @@ public class StudentData {
 
     private /*final*/ int id;
     private /*final*/ String password;
-    private /*final*/ String firstname;
-    private /*final*/ String lastname;
+    private /*final*/ String firstName;
+    private /*final*/ String lastName;
     private String courseName;
     private int missedDays;
     private double averageGrade;
@@ -14,31 +14,31 @@ public class StudentData {
     //students' id space
     public static int nextId = 0;
 
-    public StudentData(String password, String lastname, String firstname) {
+    public StudentData(String password, String lastName, String firstName) {
         this.id = nextId++;
         this.password = password;
-        this.lastname = lastname;
-        this.firstname = firstname;
+        this.lastName = lastName;
+        this.firstName = firstName;
         this.courseName = courseName;
         this.missedDays = 0;
         this.frequency = 0;
     }
 
-    public StudentData(String password, String lastname, String firstname, String courseName) {
+    public StudentData(String password, String lastName, String firstName, String courseName) {
         this.id = nextId++;
         this.password = password;
-        this.lastname = lastname;
-        this.firstname = firstname;
+        this.lastName = lastName;
+        this.firstName = firstName;
         this.courseName = courseName;
         this.missedDays = 0;
         this.frequency = 0;
     }
 
-    public StudentData(int id, String lastname, String firstname, String courseName, int missedDays) {
+    public StudentData(int id, String lastName, String firstName, String courseName, int missedDays) {
         this.id = id;
         this.password = password;
-        this.lastname = lastname;
-        this.firstname = firstname;
+        this.lastName = lastName;
+        this.firstName = firstName;
         this.courseName = courseName;
         this.missedDays = missedDays;
         this.frequency = 0;
@@ -53,12 +53,12 @@ public class StudentData {
 
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public void setCourseName(String courseName) {
@@ -89,12 +89,12 @@ public class StudentData {
         return this.password;
     }
 
-    public String getLastname() {
-        return this.lastname;
+    public String getLastName() {
+        return this.lastName;
     }
 
-    public String getFirstname() {
-        return this.firstname;
+    public String getFirstName() {
+        return this.firstName;
     }
 
     public String getCourseName() {
