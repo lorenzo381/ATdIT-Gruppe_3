@@ -31,8 +31,8 @@ public class DatabaseController {
                 	firstName text NOT NULL,
                 	frequency integer NOT NULL,
                     courseName text NOT NULL,
-                	missedDays integer,
-                	grade integer                             
+                	missedDays integer NOT NULL,
+                	grade integer NOT NULL                            
                 	
                 );""";
         Connection conn = connect();
@@ -56,7 +56,7 @@ public class DatabaseController {
     }
 
     public static StudentData get(int id) {
-        String sql = "SELECT id, lastName, firstName, frequency, courseName, missedDays FROM student WHERE id = ?";
+        String sql = "SELECT id, lastName, firstName, frequency, courseName, missedDays, grade FROM student WHERE id = ?";
         Connection conn = connect();
         StudentData rueckgabestudent = new StudentData();
 
@@ -74,6 +74,7 @@ public class DatabaseController {
                 rueckgabestudent.setFrequency(rs.getInt("frequency"));
                 rueckgabestudent.setCourseName(rs.getString("courseName"));
                 rueckgabestudent.setMissedDays(rs.getInt("missedDays"));
+                rueckgabestudent.setGrade(rs.getInt("grade"));
 
             }
         } catch (SQLException e) {
@@ -106,13 +107,15 @@ public class DatabaseController {
         }
     }
 
-    public static void setGrade(int value) {
-        String sql = "INSERT INTO student(frequency, grade) VALUES(?,?) WHERE id='1'";
+    public static void setGrade(int value) {   // ändert den aktuellen Wert der Note nicht. Vlt Eingabeparameter falsch zu sql eingaben?
+                                                // Ansonsten der Code innerhalb der Methode irgendwie nicht ganz korrekt.
+        String sql = "INSERT INTO student( frequency, grade) VALUES(?,?) WHERE id='1' ";
 
         Connection conn = connect();
         try {
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setInt(7, value);
+
 
             pstmt.executeUpdate();
 

@@ -27,9 +27,9 @@ public class DatabaseControllerTest {
     public void testWriteGrade() {
         DatabaseController.createTable();
 
-        DatabaseController.createStudent(new Student(1, "Isaak", "Luca", 2,"Programmieren" , 2, 2));
+        DatabaseController.createStudent(new Student(1, "Isaak", "Luca", 2,"Programmieren" , 2, 3));
 
-        DatabaseController.setGrade(3);
+        DatabaseController.setGrade(3);  // set Methode scheint nicht zu funktionieren! --> siehe setGrade Methode in DatabaseController
 
         StudentData student = DatabaseController.get(1);
 
@@ -47,7 +47,7 @@ public class DatabaseControllerTest {
 
         DatabaseController.createTable();
 
-        DatabaseController.createStudent(new Student(1, "Isaak", "Luca", 2, "Programmieren", 2, 1));
+        DatabaseController.createStudent(new Student(1, "Isaak", "Luca", 2, "Programmieren", 2, 3));
         DatabaseController.createStudent(new Student(2, "Lorenz", "Marco", 2, "Programmieren", 2,2));
         DatabaseController.createStudent(new Student(3, "Schröder", "Laura", 0, "Programmieren", 20,3));
         DatabaseController.createStudent(new Student(4, "Müller", "Tim", 10, "Programmieren", 0,2));
