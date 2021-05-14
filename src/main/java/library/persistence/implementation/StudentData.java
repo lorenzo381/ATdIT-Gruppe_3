@@ -3,7 +3,6 @@ package library.persistence.implementation;
 public class StudentData {
 
     private /*final*/ int id;
-    private /*final*/ String password;
     private /*final*/ String firstName;
     private /*final*/ String lastName;
     private String courseName;
@@ -15,9 +14,8 @@ public class StudentData {
     //students' id space
     public static int nextId = 0;
 
-    public StudentData(String password, String lastName, String firstName) {
+    public StudentData(String lastName, String firstName) {
         this.id = nextId++;
-        this.password = password;
         this.lastName = lastName;
         this.firstName = firstName;
         this.courseName = courseName;
@@ -25,9 +23,8 @@ public class StudentData {
         this.frequency = 0;
     }
 
-    public StudentData(String password, String lastName, String firstName, String courseName) {
+    public StudentData(String lastName, String firstName, String courseName) {
         this.id = nextId++;
-        this.password = password;
         this.lastName = lastName;
         this.firstName = firstName;
         this.courseName = courseName;
@@ -37,7 +34,6 @@ public class StudentData {
 
     public StudentData(int id, String lastName, String firstName, String courseName, int missedDays) {
         this.id = id;
-        this.password = password;
         this.lastName = lastName;
         this.firstName = firstName;
         this.courseName = courseName;
@@ -88,10 +84,6 @@ public class StudentData {
 
     public int getId() {
         return this.id;
-    }
-
-    public String getPassword() {
-        return this.password;
     }
 
     public String getLastName() {

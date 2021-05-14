@@ -27,7 +27,7 @@ public class DatabaseControllerTest {
     public void testWriteGrade(){
         DatabaseController.createTable();
 
-        DatabaseController.createStudent(new Student(1, "Isaak", "Luca", 2,"Programmieren" , 2));
+        DatabaseController.createStudent(new Student(1, "Isaak", "Luca", 2,"Programmieren" , 2, 2));
         DatabaseController.setGrade(3);
         StudentData student = DatabaseController.get(1);
 
