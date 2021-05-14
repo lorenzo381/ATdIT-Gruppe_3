@@ -1,4 +1,4 @@
-package library.gui;
+package library.presentation;
 
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
@@ -10,10 +10,11 @@ public class AufrufListener extends MouseAdapter {
     JButton jb;
 
 
-    public AufrufListener(JButton jb){
+    public AufrufListener(JButton jb) {
         this.jb = jb;
 
     }
+
     public void mouseClicked(MouseEvent e) {
 
 
