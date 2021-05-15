@@ -2,37 +2,15 @@ package library.persistence.implementation;
 
 public class StudentData {
 
-    private /*final*/ int id;
-    private /*final*/ String firstName;
-    private /*final*/ String lastName;
+    private int id;
+    private String firstName;
+    private String lastName;
     private String courseName;
     private int missedDays;
-    private double averageGrade;
     private int frequency;
     private int grade;
 
-    //students' id space
-    public static int nextId = 0;
-
-    public StudentData(String lastName, String firstName) {
-        this.id = nextId++;
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.courseName = courseName;
-        this.missedDays = 0;
-        this.frequency = 0;
-    }
-
-    public StudentData(String lastName, String firstName, String courseName) {
-        this.id = nextId++;
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.courseName = courseName;
-        this.missedDays = 0;
-        this.frequency = 0;
-    }
-
-    public StudentData(int id, String lastName, String firstName, String courseName, int missedDays) {
+    public StudentData(int id, String lastName, String firstName, String courseName, int missedDays, int frequency, int grade) {
         this.id = id;
         this.lastName = lastName;
         this.firstName = firstName;
@@ -47,7 +25,6 @@ public class StudentData {
 
     public void setId(int id) {
         this.id = id;
-
     }
 
     public void setLastName(String lastName) {

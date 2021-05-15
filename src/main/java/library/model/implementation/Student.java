@@ -7,7 +7,7 @@ import java.util.Objects;
 
 public class Student implements BasicStudent {
 
-    private /*final*/ int id;
+    private int id;
     private String firstName;
     private /*final*/ String lastName;
     private String courseName;
@@ -15,48 +15,17 @@ public class Student implements BasicStudent {
     private int frequency;
     private int grade;
 
-    //students' id space
-    public static int nextId = 0;
-
     public Student(StudentData studentData) {
-        this.id = nextId++;
+        this.id = studentData.getId();
         this.lastName = studentData.getLastName();
         this.firstName = studentData.getFirstName();
-        this.courseName = courseName;
-        this.missedDays = 0;
-        this.frequency = 0;
+        this.courseName = studentData.getCourseName();
+        this.missedDays = studentData.getMissedDays();
+        this.frequency = studentData.getFrequency();
+        this.grade = studentData.getGrade();
     }
 
-    public Student(String lastName, String firstName) {
-        this.id = nextId++;
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.courseName = courseName;
-        this.missedDays = 0;
-        this.frequency = 0;
-    }
-
-    public Student(String lastName, String firstName, Integer frequency, int grade) {
-        this.id = nextId++;
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.courseName = courseName;
-        this.missedDays = 0;
-        this.frequency = frequency;
-        this.grade = grade;
-    }
-
-    public Student(String lastName, String firstName, Integer frequency, String courseName, int grade) {
-        this.id = nextId++;
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.courseName = courseName;
-        this.missedDays = 0;
-        this.frequency = frequency;
-        this.grade = grade;
-    }
-
-    public Student(int id, String lastName, String firstName, Integer frequency, String courseName, Integer missedDays, Integer grade) {
+    public Student(int id, String lastName, String firstName, int frequency, String courseName, int missedDays, int grade) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
