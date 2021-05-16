@@ -1,16 +1,15 @@
 package library.presentation;
 
-import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 
 public class AufrufListener extends MouseAdapter {
     StudentGradeWindow sg;
-    JButton jb;
+    JCustomButton jb;
 
 
-    public AufrufListener(JButton jb) {
+    public AufrufListener(JCustomButton jb) {
         this.jb = jb;
 
     }
