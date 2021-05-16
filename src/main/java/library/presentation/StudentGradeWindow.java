@@ -18,6 +18,7 @@ public class StudentGradeWindow extends JFrame {
 
     public StudentGradeWindow (JCustomButton jb) {
 
+        jb.getAccessibleContext();
         submitJB = jb;
         pane = getContentPane();
         pane.setLayout(new GridLayout(6,1));
@@ -43,29 +44,30 @@ public class StudentGradeWindow extends JFrame {
                 if(veryWellJRB.isSelected()) {
                     System.out.println("VeryWell");
                     System.out.println();
+                    DatabaseController.setGrade(jb.getID(),1);
                 }
 
                 else if (wellJRB.isSelected()) {
                     System.out.println("Well");
                     System.out.println(jb.getID());
-                    DatabaseController.setGrade(jb.getID(),1);
+                    DatabaseController.setGrade(jb.getID(),2);
 
                 }
 
                 else if (acceptableJRB.isSelected()) {
-                    DatabaseController.setGrade(jb.getID(),2);
+                    DatabaseController.setGrade(jb.getID(),3);
                     System.out.println("acceptable");
                     System.out.println(jb.getID());
                 }
 
                 else if (notEnoughJRB.isSelected()) {
-                    DatabaseController.setGrade(jb.getID(),3);
+                    DatabaseController.setGrade(jb.getID(),4);
                     System.out.println("not enough");
                     System.out.println(jb.getID());
                 }
 
                 else {
-                    DatabaseController.setGrade(jb.getID(),4);
+                    DatabaseController.setGrade(jb.getID(),0);
                     System.out.println("nothing");
                     System.out.println(jb.getID());
 

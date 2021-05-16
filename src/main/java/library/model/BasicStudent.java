@@ -12,13 +12,9 @@ public interface BasicStudent {
 
     public void setMissedDays(int missedDays);
 
-    public void setFrequency(int frequency);
-
     public void setGrade(int grade);
 
     public void addMissedDay();
-
-    public void addFrequency();
 
     public int getId();
 
@@ -30,11 +26,7 @@ public interface BasicStudent {
 
     public int getMissedDays();
 
-    public int getFrequency();
-
     public int getGrade();
 
     public void resetMissedDays();
-
-    public void resetFrequency();
 }

@@ -7,7 +7,6 @@ public class StudentData {
     private String lastName;
     private String courseName;
     private int missedDays;
-    private int frequency;
     private int grade;
 
     public StudentData(int id, String lastName, String firstName, String courseName, int missedDays, int frequency, int grade) {
@@ -16,7 +15,6 @@ public class StudentData {
         this.firstName = firstName;
         this.courseName = courseName;
         this.missedDays = missedDays;
-        this.frequency = 0;
     }
 
     public StudentData() {
@@ -43,20 +41,12 @@ public class StudentData {
         this.missedDays = missedDays;
     }
 
-    public void setFrequency(int frequency) {
-        this.frequency = frequency;
-    }
-
     public void setGrade(int grade) {
         this.grade = grade;
     }
 
     public void addMissedDay() {
         this.missedDays++;
-    }
-
-    public void addFrequency() {
-        this.frequency++;
     }
 
     public int getId() {
@@ -79,17 +69,9 @@ public class StudentData {
         return this.missedDays;
     }
 
-    public int getFrequency() {
-        return this.frequency;
-    }
-
     public int getGrade() { return this.grade;};
 
     public void resetMissedDays() {
         this.missedDays = 0;
-    }
-
-    public void resetFrequency() {
-        this.frequency = 0;
     }
 }

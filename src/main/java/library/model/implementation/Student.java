@@ -12,7 +12,6 @@ public class Student implements BasicStudent {
     private /*final*/ String lastName;
     private String courseName;
     private int missedDays;
-    private int frequency;
     private int grade;
 
     public Student(StudentData studentData) {
@@ -21,17 +20,15 @@ public class Student implements BasicStudent {
         this.firstName = studentData.getFirstName();
         this.courseName = studentData.getCourseName();
         this.missedDays = studentData.getMissedDays();
-        this.frequency = studentData.getFrequency();
         this.grade = studentData.getGrade();
     }
 
-    public Student(int id, String lastName, String firstName, int frequency, String courseName, int missedDays, int grade) {
+    public Student(int id, String lastName, String firstName, String courseName, int missedDays, int grade) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.courseName = courseName;
         this.missedDays = missedDays;
-        this.frequency = frequency;
         this.grade = grade;
     }
 
@@ -56,20 +53,12 @@ public class Student implements BasicStudent {
         this.missedDays = missedDays;
     }
 
-    public void setFrequency(int frequency) {
-        this.frequency = frequency;
-    }
-
     public void setGrade(int grade) {
         this.grade = grade;
     }
 
     public void addMissedDay() {
         this.missedDays++;
-    }
-
-    public void addFrequency() {
-        this.frequency++;
     }
 
     @Override
@@ -95,18 +84,10 @@ public class Student implements BasicStudent {
         return this.missedDays;
     }
 
-    public int getFrequency() {
-        return this.frequency;
-    }
-
-    public int getGrade() { return this.grade;};
+    public int getGrade() { return this.grade;}
 
     public void resetMissedDays() {
         this.missedDays = 0;
-    }
-
-    public void resetFrequency() {
-        this.frequency = 0;
     }
 
     @Override
