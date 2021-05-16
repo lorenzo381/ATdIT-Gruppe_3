@@ -1,4 +1,6 @@
 package library.presentation;
+import library.persistence.implementation.DatabaseController;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -14,7 +16,7 @@ public class StudentGradeWindow extends JFrame {
     int x,y;
 
 
-    public StudentGradeWindow (JButton jb) {
+    public StudentGradeWindow (JCustomButton jb) {
 
         submitJB = jb;
         pane = getContentPane();
@@ -40,23 +42,32 @@ public class StudentGradeWindow extends JFrame {
 
                 if(veryWellJRB.isSelected()) {
                     System.out.println("VeryWell");
+                    System.out.println();
                 }
 
                 else if (wellJRB.isSelected()) {
                     System.out.println("Well");
+                    System.out.println(jb.getID());
+                    DatabaseController.setGrade(jb.getID(),1);
 
                 }
 
                 else if (acceptableJRB.isSelected()) {
+                    DatabaseController.setGrade(jb.getID(),2);
                     System.out.println("acceptable");
+                    System.out.println(jb.getID());
                 }
 
                 else if (notEnoughJRB.isSelected()) {
+                    DatabaseController.setGrade(jb.getID(),3);
                     System.out.println("not enough");
+                    System.out.println(jb.getID());
                 }
 
                 else {
+                    DatabaseController.setGrade(jb.getID(),4);
                     System.out.println("nothing");
+                    System.out.println(jb.getID());
 
                 }
 

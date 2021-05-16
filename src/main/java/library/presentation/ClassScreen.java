@@ -14,23 +14,23 @@ public class ClassScreen extends JFrame {
     JButton exitClassJB;
 
     //FIRST COLUMN
-    JButton laraJB, maxJB, timJB, lauraJB, marcoJB, lucaJB;
+    JCustomButton laraJB, zlatanJB, timJB, lauraJB, marcoJB, lucaJB, mauritzJB;
 
     //SECOND COLUMN
-    JButton jonasJB;
+    JCustomButton jonasJB;
 
 
     //THIRD COLUMN
-    JButton leonJB;
+    JCustomButton leonJB;
     JLabel teacherJL;
 
 
     //FOURTH COLUMN
-    JButton maximJL;
+    JCustomButton maximJL;
 
     //FIFTH COLUMN
 
-    JButton tomJB, philippJB, noahJB, robertJB, claraJB, sophiaJB;
+    JCustomButton tomJB, philippJB, noahJB, robertJB, claraJB, sophiaJB;
 
     //SIXTH COLUMN
 
@@ -68,16 +68,16 @@ public class ClassScreen extends JFrame {
 
 
         first = new JPanel(new GridLayout(8, 1));
-        laraJB = new JButton("Mauritz");
-        maxJB = new JButton("Zlatan");
-        timJB = new JButton("Tim");
-        lauraJB = new JButton("Laura");
-        marcoJB = new JButton("Marco");
-        lucaJB = new JButton("Luca");
+        mauritzJB = new JCustomButton("Mauritz",6);
+        zlatanJB = new JCustomButton("Zlatan",5);
+        timJB = new JCustomButton("Tim",4);
+        lauraJB = new JCustomButton("Laura",3);
+        marcoJB = new JCustomButton("Marco",2);
+        lucaJB = new JCustomButton("Luca",1);
 
-        AufrufListener al1 = new AufrufListener(laraJB);
-        laraJB.addMouseListener(al1);
-        laraJB.setBackground(Color.CYAN);
+        AufrufListener al1 = new AufrufListener(mauritzJB);
+        mauritzJB.addMouseListener(al1);
+        mauritzJB.setBackground(Color.CYAN);
 
         AufrufListener al4 = new AufrufListener(marcoJB);
         marcoJB.addMouseListener(al4);
@@ -88,8 +88,8 @@ public class ClassScreen extends JFrame {
         lucaJB.setBackground(Color.CYAN);
 
         acs.addWhiteJlToClassScreen(first);
-        first.add(laraJB);
-        first.add(maxJB);
+        first.add(mauritzJB);
+        first.add(zlatanJB);
         first.add(timJB);
         first.add(lauraJB);
         first.add(marcoJB);
@@ -101,11 +101,11 @@ public class ClassScreen extends JFrame {
         second = new JPanel(new GridLayout(8, 1));
         acs.addWhiteJlToClassScreen(second);
 
-        jonasJB = new JButton("Lara");
-        jonasJB.setBackground(Color.cyan);
-        second.add(jonasJB);
+        laraJB = new JCustomButton("Lara",7);
+        laraJB.setBackground(Color.cyan);
+        second.add(laraJB);
 
-        AufrufListener al2 = new AufrufListener(jonasJB);
+        AufrufListener al2 = new AufrufListener(laraJB);
 
         for (int i = 0; i < 5; i++) {
             acs = new addClassScreen();
@@ -113,7 +113,7 @@ public class ClassScreen extends JFrame {
 
         }
 
-        jonasJB.addMouseListener(al2);
+        laraJB.addMouseListener(al2);
         acs.addBordJpToClassScreen(second);
         pane.add(second);
 
@@ -122,10 +122,10 @@ public class ClassScreen extends JFrame {
 
         acs.addWhiteJlToClassScreen(third);
 
-        leonJB = new JButton("Jonas");
+        jonasJB = new JCustomButton("Jonas",8);
 
 
-        third.add(leonJB);
+        third.add(jonasJB);
 
         for (int i = 0; i < 4; i++) {
 
@@ -146,7 +146,7 @@ public class ClassScreen extends JFrame {
         fourth = new JPanel(new GridLayout(8, 1));
         acs = new addClassScreen();
         acs.addWhiteJlToClassScreen(fourth);
-        maximJL = new JButton("Maxim");
+        maximJL = new JCustomButton("Maxim",9);
         maximJL.setBackground(Color.cyan);
 
 
@@ -166,12 +166,12 @@ public class ClassScreen extends JFrame {
 
 
         fifth = new JPanel(new GridLayout(8, 1));
-        tomJB = new JButton("Tom");
-        philippJB = new JButton("Philipp");
-        noahJB = new JButton("Noah");
-        robertJB = new JButton("Robert");
-        claraJB = new JButton("Clara");
-        sophiaJB = new JButton("Sophia");
+        tomJB = new JCustomButton("Tom",10);
+        philippJB = new JCustomButton("Philipp",11);
+        noahJB = new JCustomButton("Noah",12);
+        robertJB = new JCustomButton("Robert",13);
+        claraJB = new JCustomButton("Clara",14);
+        sophiaJB = new JCustomButton("Sophia",15);
 
 
         acs.addWhiteJlToClassScreen(fifth);
