@@ -11,9 +11,9 @@ public class DatabaseControllerTest {
     public void testCreateStudent() {
         DatabaseController.createTable();
 
-        DatabaseController.createStudent(new Student(1, "Isaak", "Luca", 2, "Programmieren", 2, 5));
+        DatabaseController.createStudent(new Student(1, "Isaak", "Luca", 2, "Programmieren", 2, 3));
         StudentData student = DatabaseController.get(1);
-        System.out.println(student.getGrade());
+
         assertEquals(student.getId(), 1);
         assertEquals(student.getLastName(), "Isaak");
         assertEquals(student.getFirstName(), "Luca");

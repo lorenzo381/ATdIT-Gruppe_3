@@ -26,7 +26,7 @@ public class DatabaseController {
 
         String sql = """
                 CREATE TABLE IF NOT EXISTS student (     
-                	id integer PRIMARY KEY,
+                	id integer PRIMARY KEY NOT NULL,
                 	lastName text NOT NULL,
                 	firstName text NOT NULL,
                 	frequency integer NOT NULL,
