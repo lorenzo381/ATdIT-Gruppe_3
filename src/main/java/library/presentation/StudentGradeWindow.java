@@ -40,8 +40,6 @@ public class StudentGradeWindow extends JFrame {
 
                 if(veryWellJRB.isSelected()) {
                     System.out.println("VeryWell");
-
-
                 }
 
                 else if (wellJRB.isSelected()) {
@@ -51,12 +49,10 @@ public class StudentGradeWindow extends JFrame {
 
                 else if (acceptableJRB.isSelected()) {
                     System.out.println("acceptable");
-
                 }
 
                 else if (notEnoughJRB.isSelected()) {
                     System.out.println("not enough");
-
                 }
 
                 else {
