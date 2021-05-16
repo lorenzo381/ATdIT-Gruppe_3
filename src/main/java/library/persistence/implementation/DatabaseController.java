@@ -99,7 +99,6 @@ public class DatabaseController {
             pstmt.setString(5, student.getCourseName());
             pstmt.setInt(6, student.getMissedDays());
             pstmt.setInt(7, student.getGrade());
-
             pstmt.executeUpdate();
 
         } catch (SQLException e) {
@@ -107,15 +106,19 @@ public class DatabaseController {
         }
     }
 
-    public static void setGrade(int value) {   // ändert den aktuellen Wert der Note nicht. Vlt Eingabeparameter falsch zu sql eingaben?
-                                                // Ansonsten der Code innerhalb der Methode irgendwie nicht ganz korrekt.
-        String sql = "INSERT INTO student( frequency, grade) VALUES(?,?) WHERE id='1' ";
+    public static void setGrade(int id, int value) {
+
+        int frequency = DatabaseController.get(id).getFrequency();
+        frequency++;
+
+        String sql = "UPDATE student SET frequency = ?, grade = ? WHERE id = ?";
 
         Connection conn = connect();
         try {
             PreparedStatement pstmt = conn.prepareStatement(sql);
-            pstmt.setInt(7, value);
-
+            pstmt.setInt(1, frequency);
+            pstmt.setInt(2, value);
+            pstmt.setInt(3, id);
 
             pstmt.executeUpdate();
 

@@ -26,13 +26,10 @@ public class DatabaseControllerTest {
 
     @Test
     public void testWriteGrade() {
-        DatabaseController.createTable();
 
-        DatabaseController.createStudent(new Student(1, "Isaak", "Luca", 2,"Programmieren" , 2, 3));
+        DatabaseController.setGrade(5, 3);
 
-        DatabaseController.setGrade(3);  // set Methode scheint nicht zu funktionieren! --> siehe setGrade Methode in DatabaseController
-
-        StudentData student = DatabaseController.get(1);
+        StudentData student = DatabaseController.get(5);
 
         assertEquals(student.getId(), 1);
         assertEquals(student.getLastName(), "Isaak");
