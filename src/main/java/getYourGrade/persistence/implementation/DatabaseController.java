@@ -1,8 +1,6 @@
 package getYourGrade.persistence.implementation;
 // Interface for database functionality
 
-import getYourGrade.model.implementation.Student;
-
 import java.sql.*;
 
 public class DatabaseController {
@@ -84,7 +82,7 @@ public class DatabaseController {
         return rueckgabestudent;
     }
 
-    public static void createStudent(Student student) {    // Submit Button Vorlage für Note in Datenbankeintrag übertragen
+    public static void createStudent(StudentData student) {    // Submit Button Vorlage für Note in Datenbankeintrag übertragen
         String sql = "INSERT INTO student(id, lastName, firstName, courseName, missedDays, grade) VALUES(?,?,?,?,?,?)";
 
         Connection conn = connect();

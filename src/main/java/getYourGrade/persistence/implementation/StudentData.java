@@ -9,12 +9,13 @@ public class StudentData {
     private int missedDays;
     private int grade;
 
-    public StudentData(int id, String lastName, String firstName, String courseName, int missedDays, int frequency, int grade) {
+    public StudentData(int id, String lastName, String firstName, String courseName, int missedDays, int grade) {
         this.id = id;
         this.lastName = lastName;
         this.firstName = firstName;
         this.courseName = courseName;
         this.missedDays = missedDays;
+        this.grade = grade;
     }
 
     public StudentData() {
