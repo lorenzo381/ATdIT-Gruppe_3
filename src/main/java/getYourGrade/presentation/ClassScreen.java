@@ -72,10 +72,10 @@ public class ClassScreen extends JFrame {
 
         firstJP = new JPanel(new GridLayout(8, 1));
 
-        zeroJCB = new JCustomButton(DatabaseController.get(zero).getLastName(),zero);
-        oneJCB = new JCustomButton(DatabaseController.get(one).getLastName(),one);
-        twoJCB = new JCustomButton(DatabaseController.get(two).getLastName(),two);
-        threeJCB = new JCustomButton(DatabaseController.get(three).getLastName(),three);
+        zeroJCB = new JCustomButton(DatabaseController.get(zero).getFirstName(),zero);
+        oneJCB = new JCustomButton(DatabaseController.get(one).getFirstName(),one);
+        twoJCB = new JCustomButton(DatabaseController.get(two).getFirstName(),two);
+        threeJCB = new JCustomButton(DatabaseController.get(three).getFirstName(),three);
         fourJCB = new JCustomButton(DatabaseController.get(four).getFirstName(), four);
         fiveJCB = new JCustomButton(DatabaseController.get(five).getFirstName(), five);
 
