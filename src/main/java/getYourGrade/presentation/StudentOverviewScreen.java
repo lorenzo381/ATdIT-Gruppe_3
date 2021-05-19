@@ -1,4 +1,7 @@
 package getYourGrade.presentation;
+
+import getYourGrade.persistence.implementation.DatabaseController;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -51,11 +54,11 @@ public class StudentOverviewScreen extends JFrame {
             jpArray[i] = new JPanel();
             jpArray[i].setLayout(new GridLayout(1,5));
 
-            jlLastName = new JLabel(/*DatabaseController.get(i).getLastName()*/);
-            jlFirstName = new JLabel(/*DatabaseController.getFirstName(i)*/);
-            jlCourseName = new JLabel(/*DatabaseController.getCourseName(i)*/);
-            jlMissedDays = new JLabel(/*DatabaseController.getMissedDays(i)*/);
-            jlGrade = new JLabel(/*DatabaseController.getGrade()*/);
+            jlLastName = new JLabel(DatabaseController.get(i).getLastName());
+            jlFirstName = new JLabel(DatabaseController.get(i).getFirstName());
+            jlCourseName = new JLabel(DatabaseController.get(i).getCourseName());
+            jlMissedDays = new JLabel(String.valueOf(DatabaseController.get(i).getMissedDays()));
+            jlGrade = new JLabel(String.valueOf(DatabaseController.get(i).getGrade()));
 
 
             jlLastName.setBackground(Color.white);
