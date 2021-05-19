@@ -145,8 +145,6 @@ public class LogInScreen extends JFrame {
         submitJB.setText("Login failed. Try again!");
         submitJB.setPreferredSize(new Dimension(200, 40));
         submitJB.setBackground(Color.red);
-
-
     }
 
 

@@ -51,7 +51,7 @@ public class StudentOverviewScreen extends JFrame {
             jpArray[i] = new JPanel();
             jpArray[i].setLayout(new GridLayout(1,5));
 
-            jlLastName = new JLabel(/*DatabaseController.getLastName(i)*/);
+            jlLastName = new JLabel(/*DatabaseController.get(i).getLastName()*/);
             jlFirstName = new JLabel(/*DatabaseController.getFirstName(i)*/);
             jlCourseName = new JLabel(/*DatabaseController.getCourseName(i)*/);
             jlMissedDays = new JLabel(/*DatabaseController.getMissedDays(i)*/);

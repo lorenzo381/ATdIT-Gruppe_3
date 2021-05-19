@@ -37,6 +37,14 @@ public class DatabaseController {
 
     }
 
+    public static void clearTable() {
+
+        String sql = "DELETE FROM student";
+        Connection conn = connect();
+        execute(conn, sql);
+
+    }
+
     public static void execute(Connection conn, String sql) {     //führt universal alles mögliche aus
         try {
             Statement stmt = conn.createStatement();
