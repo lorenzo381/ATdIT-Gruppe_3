@@ -1,5 +1,7 @@
 package getYourGrade.presentation;
 
+import getYourGrade.persistence.implementation.DatabaseController;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -7,17 +9,18 @@ import java.awt.*;
 public class ClassScreen extends JFrame {
 
     Container pane;
-    JPanel borderleft, first, second, third, fourth, fifth, sixth, seventh;
+    JPanel zeroJP, firstJP, secondJP, thirdJP, fourthJP, fifthJP, sixthJP, seventhJP;
 
     //BORDER LEFT COLUMN
     JPanel exitJP;
     JButton exitClassJB;
 
     //FIRST COLUMN
-    JCustomButton laraJB, zlatanJB, timJB, lauraJB, marcoJB, lucaJB, mauritzJB;
+    JCustomButton zeroJCB, oneJCB, twoJCB, threeJCB,  fourJCB, fiveJCB,  sixJCB;
+    int zero = 0,one=1, two=2, three=3, four=4, five=5, six=6, seven =7, eight=8, nine = 9, ten = 10, eleven =11, twelve =12, thirteen=13, fourteen=14;
 
     //SECOND COLUMN
-    JCustomButton jonasJB;
+    JCustomButton sevenJB;
 
 
     //THIRD COLUMN
@@ -26,11 +29,11 @@ public class ClassScreen extends JFrame {
 
 
     //FOURTH COLUMN
-    JCustomButton maximJL;
+    JCustomButton eightJCB;
 
     //FIFTH COLUMN
 
-    JCustomButton tomJB, philippJB, noahJB, robertJB, claraJB, sophiaJB;
+    JCustomButton nineJCB, tenJCB, elevenJCB, twelveJCB, thirteenJCB, fourteenJCB;
 
     //SIXTH COLUMN
 
@@ -48,7 +51,7 @@ public class ClassScreen extends JFrame {
         addClassScreen acs = new addClassScreen();
 
 
-        borderleft = new JPanel(new GridLayout(8, 1));
+        zeroJP = new JPanel(new GridLayout(8, 1));
         exitJP = new JPanel(new FlowLayout());
         exitJP.setBackground(Color.white);
         CloseClassScreenListener closeClassScreenListener = new CloseClassScreenListener(this);
@@ -58,78 +61,79 @@ public class ClassScreen extends JFrame {
         exitClassJB.setPreferredSize(new Dimension(130, 40));
         //bl1.addActionListener();
         exitJP.add(exitClassJB, CENTER_ALIGNMENT);
-        borderleft.add(exitJP);
+        zeroJP.add(exitJP);
 
         for (int i = 0; i < 7; i++) {
             acs = new addClassScreen();
-            acs.addWhiteJlToClassScreen(borderleft);
+            acs.addWhiteJlToClassScreen(zeroJP);
         }
-        pane.add(borderleft);
+        pane.add(zeroJP);
 
 
-        first = new JPanel(new GridLayout(8, 1));
-        mauritzJB = new JCustomButton("Mauritz",6);
-        zlatanJB = new JCustomButton("Zlatan",5);
-        timJB = new JCustomButton("Tim",4);
-        lauraJB = new JCustomButton("Laura",3);
-        marcoJB = new JCustomButton("Marco",2);
-        lucaJB = new JCustomButton("Luca",1);
+        firstJP = new JPanel(new GridLayout(8, 1));
 
-        AufrufListener al1 = new AufrufListener(mauritzJB);
-        mauritzJB.addMouseListener(al1);
-        mauritzJB.setBackground(Color.CYAN);
+        zeroJCB = new JCustomButton(DatabaseController.get(zero).getLastName(),zero);
+        oneJCB = new JCustomButton(DatabaseController.get(one).getLastName(),one);
+        twoJCB = new JCustomButton(DatabaseController.get(two).getLastName(),two);
+        threeJCB = new JCustomButton(DatabaseController.get(three).getLastName(),three);
+        fourJCB = new JCustomButton(DatabaseController.get(four).getFirstName(), four);
+        fiveJCB = new JCustomButton(DatabaseController.get(five).getFirstName(), five);
 
-        AufrufListener al4 = new AufrufListener(marcoJB);
-        marcoJB.addMouseListener(al4);
-        marcoJB.setBackground(Color.CYAN);
+        AufrufListener al1 = new AufrufListener(fourJCB);
+        fourJCB.addMouseListener(al1);
+        fourJCB.setBackground(Color.CYAN);
 
-        AufrufListener al5 = new AufrufListener(lucaJB);
-        lucaJB.addMouseListener(al5);
-        lucaJB.setBackground(Color.CYAN);
+        AufrufListener al4 = new AufrufListener(threeJCB);
+        threeJCB.addMouseListener(al4);
+        threeJCB.setBackground(Color.CYAN);
 
-        acs.addWhiteJlToClassScreen(first);
-        first.add(mauritzJB);
-        first.add(zlatanJB);
-        first.add(timJB);
-        first.add(lauraJB);
-        first.add(marcoJB);
-        first.add(lucaJB);
-        acs.addWhiteJlToClassScreen(first);
-        pane.add(first);
+        AufrufListener al5 = new AufrufListener(fiveJCB);
+        fiveJCB.addMouseListener(al5);
+        fiveJCB.setBackground(Color.CYAN);
+
+        acs.addWhiteJlToClassScreen(firstJP);
+        firstJP.add(fourJCB);
+        firstJP.add(zeroJCB);
+        firstJP.add(oneJCB);
+        firstJP.add(twoJCB);
+        firstJP.add(threeJCB);
+        firstJP.add(fiveJCB);
+        acs.addWhiteJlToClassScreen(firstJP);
+        pane.add(firstJP);
 
 
-        second = new JPanel(new GridLayout(8, 1));
-        acs.addWhiteJlToClassScreen(second);
+        secondJP = new JPanel(new GridLayout(8, 1));
+        acs.addWhiteJlToClassScreen(secondJP);
 
-        laraJB = new JCustomButton("Lara",7);
-        laraJB.setBackground(Color.cyan);
-        second.add(laraJB);
+        sixJCB = new JCustomButton(DatabaseController.get(six).getFirstName(), six);
+        sixJCB.setBackground(Color.cyan);
+        secondJP.add(sixJCB);
 
-        AufrufListener al2 = new AufrufListener(laraJB);
+        AufrufListener al2 = new AufrufListener(sixJCB);
 
         for (int i = 0; i < 5; i++) {
             acs = new addClassScreen();
-            acs.addWhiteJlToClassScreen(second);
+            acs.addWhiteJlToClassScreen(secondJP);
 
         }
 
-        laraJB.addMouseListener(al2);
-        acs.addBordJpToClassScreen(second);
-        pane.add(second);
+        sixJCB.addMouseListener(al2);
+        acs.addBordJpToClassScreen(secondJP);
+        pane.add(secondJP);
 
 
-        third = new JPanel(new GridLayout(8, 1));
+        thirdJP = new JPanel(new GridLayout(8, 1));
 
-        acs.addWhiteJlToClassScreen(third);
+        acs.addWhiteJlToClassScreen(thirdJP);
 
-        jonasJB = new JCustomButton("Jonas",8);
+        sevenJB = new JCustomButton(DatabaseController.get(seven).getFirstName(), seven);
 
 
-        third.add(jonasJB);
+        thirdJP.add(sevenJB);
 
         for (int i = 0; i < 4; i++) {
 
-            acs.addWhiteJlToClassScreen(third);
+            acs.addWhiteJlToClassScreen(thirdJP);
         }
 
         teacherJL = new JLabel("Teacher", JLabel.CENTER);
@@ -138,54 +142,54 @@ public class ClassScreen extends JFrame {
         teacherJL.setOpaque(true);
 
 
-        third.add(teacherJL);
-        acs.addBordWithTextJpToClassScreen(third);
-        pane.add(third);
+        thirdJP.add(teacherJL);
+        acs.addBordWithTextJpToClassScreen(thirdJP);
+        pane.add(thirdJP);
 
 
-        fourth = new JPanel(new GridLayout(8, 1));
+        fourthJP = new JPanel(new GridLayout(8, 1));
         acs = new addClassScreen();
-        acs.addWhiteJlToClassScreen(fourth);
-        maximJL = new JCustomButton("Maxim",9);
-        maximJL.setBackground(Color.cyan);
+        acs.addWhiteJlToClassScreen(fourthJP);
+        eightJCB = new JCustomButton(DatabaseController.get(eight).getFirstName(), eight);
+        eightJCB.setBackground(Color.cyan);
 
 
-        fourth.add(maximJL);
+        fourthJP.add(eightJCB);
 
         for (int i = 0; i < 5; i++) {
-            acs.addWhiteJlToClassScreen(fourth);
+            acs.addWhiteJlToClassScreen(fourthJP);
         }
 
 
-        AufrufListener al3 = new AufrufListener(maximJL);
-        maximJL.addMouseListener(al3);
+        AufrufListener al3 = new AufrufListener(eightJCB);
+        eightJCB.addMouseListener(al3);
 
 
-        acs.addBordJpToClassScreen(fourth);
-        pane.add(fourth);
+        acs.addBordJpToClassScreen(fourthJP);
+        pane.add(fourthJP);
 
 
-        fifth = new JPanel(new GridLayout(8, 1));
-        tomJB = new JCustomButton("Tom",10);
-        philippJB = new JCustomButton("Philipp",11);
-        noahJB = new JCustomButton("Noah",12);
-        robertJB = new JCustomButton("Robert",13);
-        claraJB = new JCustomButton("Clara",14);
-        sophiaJB = new JCustomButton("Sophia",15);
+        fifthJP = new JPanel(new GridLayout(8, 1));
+        nineJCB = new JCustomButton(DatabaseController.get(nine).getFirstName(), nine);
+        tenJCB = new JCustomButton(DatabaseController.get(ten).getFirstName(),ten );
+        elevenJCB = new JCustomButton(DatabaseController.get(eleven).getFirstName(), eleven);
+        twelveJCB = new JCustomButton(DatabaseController.get(twelve).getFirstName(), twelve);
+        thirteenJCB = new JCustomButton(DatabaseController.get(thirteen).getFirstName(), thirteen);
+        fourteenJCB = new JCustomButton(DatabaseController.get(fourteen).getFirstName(), fourteen);
 
 
-        acs.addWhiteJlToClassScreen(fifth);
-        fifth.add(tomJB);
-        fifth.add(philippJB);
-        fifth.add(noahJB);
-        fifth.add(robertJB);
-        fifth.add(claraJB);
-        fifth.add(sophiaJB);
-        acs.addWhiteJlToClassScreen(fifth);
-        pane.add(fifth);
+        acs.addWhiteJlToClassScreen(fifthJP);
+        fifthJP.add(nineJCB);
+        fifthJP.add(tenJCB);
+        fifthJP.add(elevenJCB);
+        fifthJP.add(twelveJCB);
+        fifthJP.add(thirteenJCB);
+        fifthJP.add(fourteenJCB);
+        acs.addWhiteJlToClassScreen(fifthJP);
+        pane.add(fifthJP);
 
 
-        sixth = new JPanel(new GridLayout(8, 1));
+        sixthJP = new JPanel(new GridLayout(8, 1));
 
 
         absentJL = new JLabel("Abwesend: ", JLabel.RIGHT);
@@ -193,17 +197,17 @@ public class ClassScreen extends JFrame {
         absentJL.setBackground(Color.white);
         absentJL.setOpaque(true);
 
-        acs.addWhiteJlToClassScreen(sixth);
-        sixth.add(absentJL);
+        acs.addWhiteJlToClassScreen(sixthJP);
+        sixthJP.add(absentJL);
 
         for (int i = 0; i < 6; i++) {
-            acs.addWhiteJlToClassScreen(sixth);
+            acs.addWhiteJlToClassScreen(sixthJP);
         }
 
-        pane.add(sixth);
+        pane.add(sixthJP);
 
 
-        seventh = new JPanel(new GridLayout(8, 1));
+        seventhJP = new JPanel(new GridLayout(8, 1));
 
         timerJL = new JLabel(dateS, JLabel.CENTER);
         timerJL.setBackground(Color.white);
@@ -227,18 +231,18 @@ public class ClassScreen extends JFrame {
         dateJL.setBackground(gr);
         dateJL.setOpaque(true);
         DateTimer dateTimer = new DateTimer(dateJL);
-        seventh.add(dateJL);
-        seventh.add(absentNamesJL);
+        seventhJP.add(dateJL);
+        seventhJP.add(absentNamesJL);
 
         for (int i = 0; i < 3; i++) {
-            acs.addWhiteJlToClassScreen(seventh);
+            acs.addWhiteJlToClassScreen(seventhJP);
         }
 
 
-        seventh.add(timerHeadline);
-        seventh.add(timerJL);
-        acs.addWhiteJlToClassScreen(seventh);
-        pane.add(seventh);
+        seventhJP.add(timerHeadline);
+        seventhJP.add(timerJL);
+        acs.addWhiteJlToClassScreen(seventhJP);
+        pane.add(seventhJP);
 
 
         setVisible(true);
