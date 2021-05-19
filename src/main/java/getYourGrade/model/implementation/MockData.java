@@ -9,8 +9,9 @@ public class MockData {
     private static final int[] grades = {0, 4, 2, 3, 0, 0, 1, 2, 1, 0, 3, 4, 0, 5, 5};
 
     public static Student getMockStudent(String courseName) {
+        int currentID = nextID;
         nextID++;
-        Student returnStudent = new Student(nextID, lastNames[nextID], firstNames[nextID], courseName, missedDays[nextID], grades[nextID]);
+        Student returnStudent = new Student(currentID, lastNames[currentID], firstNames[currentID], courseName, missedDays[currentID], grades[currentID]);
         if (nextID == 15)
             nextID = 0;
         return returnStudent;
