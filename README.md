@@ -1,71 +1,12 @@
 # ATdIT-Gruppe_3
-Bibliothek IBAIT 2020
+getYourGrade
 
-Meeting 17.04.21
+Willkommen im GitHib der Gruppe 3!
 
-insgesamt: Meilensteine ausformulieren --> SMART Goals
+In diesem GitHub ist alles, was es zu getYourGrade zu finden gibt. Zum einen ist der Code enthalten.
+Andererseits gibts es einen Ordner mit zusätzlichen Inhalten, wie einer Betriebsanleitung zu getYourGrade, der Präsentation,
+oder Hintergrundinformationen zum Entwicklungsprozess.
 
-THEMA:
+Der Ordner ist (Aufteilung Informationen erklärt)
 
-Wissenschaftliche Grundlage z.B Statistiken, Literatur (Jonas)
-Auswahl eines Tools zur Selbstorganisation (Luca, Lara) z.B. SCRUM, KANBAS,
-Erfassung, Entwicklung und Darstellung der in der Themenstellung "Berufe" enthaltenen Fragen ("Digitalisierung und Gesellschaft") (Lara)
-
-
-
-DEVELOPMENT:
-
-maven and github (Marco)
-EPK-Diagramm (Maxim)
-Beschreibung des Programmierstils
-
-
-DOKUMENTATION: 
-Verantwortlichkeit des Programmiers
-Fehlerbehandlung
-
-
-PROTOTYP:
-
-Abgrenzung des Scopes --> Mitarbeitsnoten durch Qualität und Quantität der Meldungen (Maxim)
-Beschreibung des Umfangs (Maxim)
-Prototyp UI per PowerPoint (Luca)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Meeting 14.04.21
-
-Syncs jeweils Montag und Freitag um 08:00 Uhr
-
-THEMA:
-
-Wissenschaftliche Grundlage z.B Statistiken, Literatur (Jonas)
-Auswahl eines Tools zur Selbstorganisation (Luca, Lara) z.B. SCRUM, KANBAS,
-Erfassung, Entwicklung und Darstellung der in der Themenstellung "Berufe" enthaltenen Fragen ("Digitalisierung und Gesellschaft") (Lara)
-DEVELOPMENT:
-
-maven and github (Marco)
-EPK-Diagramm (Maxim)
-Beschreibung des Programmierstils
-Dokumentation: Verantwortlichkeit des Programmiers
-Fehlerbehandlung
-PROTOTYP:
-
-Abgrenzung des Scopes --> Mitarbeitsnoten durch Qualität und Quantität der Meldungen
-Beschreibung des Umfangs
+Gruppe 3 besteht aus: Jonas Jamin, Marco Lorenz, Luca Isaak und Lara Schulz.
