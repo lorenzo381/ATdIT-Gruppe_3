@@ -10,10 +10,10 @@ public class StudentOverviewScreen extends JFrame {
     Container pane;
     JPanel white, description;
 
-    JPanel zero,one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen;
-    JPanel jpArray [] = {zero,one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen };
+    JPanel zero, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen;
+    JPanel jpArray [] = {zero, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen};
     JLabel jp , jlLastName, jlFirstName, jlCourseName,  jlMissedDays, jlGrade;
-    JLabel jlArray[] = { jlLastName, jlFirstName, jlCourseName,  jlMissedDays, jlGrade};
+    JLabel jlArray[] = {jlLastName, jlFirstName, jlCourseName,  jlMissedDays, jlGrade};
 
 
     String arrayDescriptions [] = {"lastname", "firstname",  "course name", "missed days", "grade"};
@@ -50,7 +50,7 @@ public class StudentOverviewScreen extends JFrame {
 
 
 
-        for (int i =1; i<jpArray.length; i++) {
+        for (int i=0; i<jpArray.length; i++) {
             jpArray[i] = new JPanel();
             jpArray[i].setLayout(new GridLayout(1,5));
 
