@@ -9,6 +9,7 @@ Andererseits gibt es einen Ordner mit zusätzlichen Inhalten, wie einer Betriebs
 oder Hintergrundinformationen zum Entwicklungsprozess.
 
 Der Ordner Materialien ist unterteilt in die Unterordner Grundsätzliches, Problemstellung, Präsentation und vorbereitende Arbeiten. Grundsätzliches enthält allgemeine Informationen. Dazu zählen die Eingrenzung des Scopes, die Beschreibung des Umfangs, die Organisation der Gruppe, eine Rollenverteilung und die Betriebsanleitung. 
+
 Im Unterordner Problemstellung befinden sich die Dateien, die uns zur Entwicklung von getYoutGrade veranlasst haben. Dazu zählen ein Interview, welches mit Lehrern durchgeführt wurde, die Fragen zu Digitalisierung und Gesellschaft und eine wissenschaftliche Grundlage.
 Im Unterordner vorbereitende Arbeiten befinden sich die Vorbereiteten Prototypen zum User-Interface, generelle Prototypen zum Programm, vorbereitenden SQL Arbeiten, verschieden Diagramme und Dokumente zur Selbstorganisation.
 Im letzten Ordner Präsentation befindet sich die PowerPoint Präsentation zu unserem Vortrag.
