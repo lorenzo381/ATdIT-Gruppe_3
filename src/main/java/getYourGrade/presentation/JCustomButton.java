@@ -3,13 +3,13 @@ package getYourGrade.presentation;
 import javax.swing.*;
 
 public class JCustomButton extends JButton {
-    int id;
+    int ID;
     String text;
 
 
-    JCustomButton (String text, int id) {
+    JCustomButton (String text, int ID) {
         super(text);
-        this.id = id;
+        this.ID = ID;
 
     }
 
@@ -17,7 +17,7 @@ public class JCustomButton extends JButton {
 
 
     public int getID() {
-        return  id;
+        return  ID;
     }
 
     public static void main (String [] args) {

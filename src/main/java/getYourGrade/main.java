@@ -19,7 +19,7 @@ public class main {
 
         for(int i=0; i<15; i++) {
             students[i] = MockData.getMockStudent("Mathematik");
-            studentData[i] = new StudentData(students[i].getId(), students[i].getLastName(), students[i].getFirstName(), students[i].getCourseName(), students[i].getMissedDays(), students[i].getGrade());
+            studentData[i] = new StudentData(students[i].getID(), students[i].getLASTNAME(), students[i].getFIRSTNAME(), students[i].getCourseName(), students[i].getMissedDays(), students[i].getGrade());
             DatabaseController.createStudent(studentData[i]);
         }
 

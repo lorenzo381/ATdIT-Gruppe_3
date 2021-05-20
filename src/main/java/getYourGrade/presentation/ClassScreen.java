@@ -72,12 +72,12 @@ public class ClassScreen extends JFrame {
 
         firstJP = new JPanel(new GridLayout(8, 1));
 
-        zeroJCB = new JCustomButton(DatabaseController.get(zero).getFirstName(),zero);
-        oneJCB = new JCustomButton(DatabaseController.get(one).getFirstName(),one);
-        twoJCB = new JCustomButton(DatabaseController.get(two).getFirstName(),two);
-        threeJCB = new JCustomButton(DatabaseController.get(three).getFirstName(),three);
-        fourJCB = new JCustomButton(DatabaseController.get(four).getFirstName(), four);
-        fiveJCB = new JCustomButton(DatabaseController.get(five).getFirstName(), five);
+        zeroJCB = new JCustomButton(DatabaseController.get(zero).getFIRSTNAME(),zero);
+        oneJCB = new JCustomButton(DatabaseController.get(one).getFIRSTNAME(),one);
+        twoJCB = new JCustomButton(DatabaseController.get(two).getFIRSTNAME(),two);
+        threeJCB = new JCustomButton(DatabaseController.get(three).getFIRSTNAME(),three);
+        fourJCB = new JCustomButton(DatabaseController.get(four).getFIRSTNAME(), four);
+        fiveJCB = new JCustomButton(DatabaseController.get(five).getFIRSTNAME(), five);
 
         AufrufListener al1 = new AufrufListener(fourJCB);
         fourJCB.addMouseListener(al1);
@@ -105,7 +105,7 @@ public class ClassScreen extends JFrame {
         secondJP = new JPanel(new GridLayout(8, 1));
         acs.addWhiteJlToClassScreen(secondJP);
 
-        sixJCB = new JCustomButton(DatabaseController.get(six).getFirstName(), six);
+        sixJCB = new JCustomButton(DatabaseController.get(six).getFIRSTNAME(), six);
         sixJCB.setBackground(Color.cyan);
         secondJP.add(sixJCB);
 
@@ -126,7 +126,7 @@ public class ClassScreen extends JFrame {
 
         acs.addWhiteJlToClassScreen(thirdJP);
 
-        sevenJB = new JCustomButton(DatabaseController.get(seven).getFirstName(), seven);
+        sevenJB = new JCustomButton(DatabaseController.get(seven).getFIRSTNAME(), seven);
 
 
         thirdJP.add(sevenJB);
@@ -150,7 +150,7 @@ public class ClassScreen extends JFrame {
         fourthJP = new JPanel(new GridLayout(8, 1));
         acs = new addClassScreen();
         acs.addWhiteJlToClassScreen(fourthJP);
-        eightJCB = new JCustomButton(DatabaseController.get(eight).getFirstName(), eight);
+        eightJCB = new JCustomButton(DatabaseController.get(eight).getFIRSTNAME(), eight);
         eightJCB.setBackground(Color.cyan);
 
 
@@ -170,12 +170,12 @@ public class ClassScreen extends JFrame {
 
 
         fifthJP = new JPanel(new GridLayout(8, 1));
-        nineJCB = new JCustomButton(DatabaseController.get(nine).getFirstName(), nine);
-        tenJCB = new JCustomButton(DatabaseController.get(ten).getFirstName(),ten );
-        elevenJCB = new JCustomButton(DatabaseController.get(eleven).getFirstName(), eleven);
-        twelveJCB = new JCustomButton(DatabaseController.get(twelve).getFirstName(), twelve);
-        thirteenJCB = new JCustomButton(DatabaseController.get(thirteen).getFirstName(), thirteen);
-        fourteenJCB = new JCustomButton(DatabaseController.get(fourteen).getFirstName(), fourteen);
+        nineJCB = new JCustomButton(DatabaseController.get(nine).getFIRSTNAME(), nine);
+        tenJCB = new JCustomButton(DatabaseController.get(ten).getFIRSTNAME(),ten );
+        elevenJCB = new JCustomButton(DatabaseController.get(eleven).getFIRSTNAME(), eleven);
+        twelveJCB = new JCustomButton(DatabaseController.get(twelve).getFIRSTNAME(), twelve);
+        thirteenJCB = new JCustomButton(DatabaseController.get(thirteen).getFIRSTNAME(), thirteen);
+        fourteenJCB = new JCustomButton(DatabaseController.get(fourteen).getFIRSTNAME(), fourteen);
 
 
         acs.addWhiteJlToClassScreen(fifthJP);

@@ -14,9 +14,9 @@ public class DatabaseControllerTest {
         DatabaseController.createStudent(new StudentData(1, "Isaak", "Luca", "Programmieren", 2, 3));
         StudentData student = DatabaseController.get(1);
 
-        assertEquals(student.getId(), 1);
-        assertEquals(student.getLastName(), "Isaak");
-        assertEquals(student.getFirstName(), "Luca");
+        assertEquals(student.getID(), 1);
+        assertEquals(student.getLASTNAME(), "Isaak");
+        assertEquals(student.getFIRSTNAME(), "Luca");
         assertEquals(student.getCourseName(), "Programmieren");
         assertEquals(student.getMissedDays(), 2);
         assertEquals(student.getGrade(), 3);
@@ -33,9 +33,9 @@ public class DatabaseControllerTest {
 
         StudentData student = DatabaseController.get(1);
 
-        assertEquals(student.getId(), 1);
-        assertEquals(student.getLastName(), "Isaak");
-        assertEquals(student.getFirstName(), "Luca");
+        assertEquals(student.getID(), 1);
+        assertEquals(student.getLASTNAME(), "Isaak");
+        assertEquals(student.getFIRSTNAME(), "Luca");
         assertEquals(student.getCourseName(), "Programmieren");
         assertEquals(student.getMissedDays(), 2);
         assertEquals(student.getGrade(), 6);

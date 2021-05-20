@@ -2,17 +2,17 @@ package getYourGrade.persistence.implementation;
 
 public class StudentData {
 
-    private int id;
-    private String firstName;
-    private String lastName;
+    private int ID;
+    private String FIRSTNAME;
+    private String LASTNAME;
     private String courseName;
     private int missedDays;
     private int grade;
 
-    public StudentData(int id, String lastName, String firstName, String courseName, int missedDays, int grade) {
-        this.id = id;
-        this.lastName = lastName;
-        this.firstName = firstName;
+    public StudentData(int ID, String LASTNAME, String FIRSTNAME, String courseName, int missedDays, int grade) {
+        this.ID = ID;
+        this.LASTNAME = LASTNAME;
+        this.FIRSTNAME = FIRSTNAME;
         this.courseName = courseName;
         this.missedDays = missedDays;
         this.grade = grade;
@@ -22,16 +22,16 @@ public class StudentData {
 
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int ID) {
+        this.ID = ID;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLASTNAME(String LASTNAME) {
+        this.LASTNAME = LASTNAME;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFIRSTNAME(String FIRSTNAME) {
+        this.FIRSTNAME = FIRSTNAME;
     }
 
     public void setCourseName(String courseName) {
@@ -50,16 +50,16 @@ public class StudentData {
         this.missedDays++;
     }
 
-    public int getId() {
-        return this.id;
+    public int getID() {
+        return this.ID;
     }
 
-    public String getLastName() {
-        return this.lastName;
+    public String getLASTNAME() {
+        return this.LASTNAME;
     }
 
-    public String getFirstName() {
-        return this.firstName;
+    public String getFIRSTNAME() {
+        return this.FIRSTNAME;
     }
 
     public String getCourseName() {
