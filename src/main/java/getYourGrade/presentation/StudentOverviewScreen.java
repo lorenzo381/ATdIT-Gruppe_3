@@ -16,7 +16,7 @@ public class StudentOverviewScreen extends JFrame {
     JLabel jp , jlLASTNAME, jlFIRSTNAME, jlCourseName,  jlMissedDays, jlGrade;
     JLabel jlArray[] = {jlLASTNAME, jlFIRSTNAME, jlCourseName,  jlMissedDays, jlGrade};
 
-    ResourceBundle resourcebundle = ResourceBundle.getBundle("presentation");
+    ResourceBundle resourcebundle = ResourceBundle.getBundle("i18n/presentation");
     String arrayDescriptions [] = {resourcebundle.getString("lastname"), resourcebundle.getString("firstname"), resourcebundle.getString( "course name"), resourcebundle.getString("missed days"),resourcebundle.getString( "grade")};
 
 

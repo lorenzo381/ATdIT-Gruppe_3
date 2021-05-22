@@ -15,7 +15,7 @@ public class LogInScreen extends JFrame {
     ImageIcon account;
     JPanel textJP, boxJP, combinedJP, thirdRowSubmitJP;
     addJlToGridBackLayout addJl;
-    private ResourceBundle resourcebundle = ResourceBundle.getBundle("presentation");
+    private ResourceBundle resourcebundle = ResourceBundle.getBundle("i18n/presentation");
 
 
     public LogInScreen() {

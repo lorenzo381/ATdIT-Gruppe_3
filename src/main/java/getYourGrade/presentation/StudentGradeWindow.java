@@ -15,7 +15,7 @@ public class StudentGradeWindow extends JFrame {
     ButtonGroup buttonGroup;
     JButton submitJB;
     int x,y;
-    ResourceBundle resourcebundle = ResourceBundle.getBundle("presentation");
+    ResourceBundle resourcebundle = ResourceBundle.getBundle("i18n/presentation");
 
 
     public StudentGradeWindow (JCustomButton jb) {
@@ -35,7 +35,7 @@ public class StudentGradeWindow extends JFrame {
 
         setVisible(true);
 
-        submitJB = new JButton("Submit");
+        submitJB = new JButton(resourcebundle.getString("Submit"));
         submitJB.setBackground(Color.green);
         ActionListener al = new ActionListener() {
             @Override
@@ -44,13 +44,13 @@ public class StudentGradeWindow extends JFrame {
                 jb.setBackground(null);
 
                 if(veryWellJRB.isSelected()) {
-                    System.out.println("VeryWell");
+                    System.out.println(resourcebundle.getString("VERYWELL"));
                     System.out.println();
                     DatabaseController.setGrade(jb.getID(),1);
                 }
 
                 else if (wellJRB.isSelected()) {
-                    System.out.println("Well");
+                    System.out.println(resourcebundle.getString("WELL"));
                     System.out.println(jb.getID());
                     DatabaseController.setGrade(jb.getID(),2);
 
@@ -58,13 +58,13 @@ public class StudentGradeWindow extends JFrame {
 
                 else if (acceptableJRB.isSelected()) {
                     DatabaseController.setGrade(jb.getID(),3);
-                    System.out.println("acceptable");
+                    System.out.println(resourcebundle.getString("ACCEPTABLE"));
                     System.out.println(jb.getID());
                 }
 
                 else if (notEnoughJRB.isSelected()) {
                     DatabaseController.setGrade(jb.getID(),4);
-                    System.out.println("not enough");
+                    System.out.println("NOT ENOUGH");
                     System.out.println(jb.getID());
                 }
 

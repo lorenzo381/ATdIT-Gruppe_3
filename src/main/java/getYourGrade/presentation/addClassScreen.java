@@ -5,7 +5,7 @@ import java.util.ResourceBundle;
 
 public class addClassScreen extends JFrame {
     Color gr = new Color(0,60,0);
-    ResourceBundle resourcebundle = ResourceBundle.getBundle("presentation");
+    ResourceBundle resourcebundle = ResourceBundle.getBundle("i18n/presentation");
 
     public  void addWhiteJlToClassScreen(JPanel jp) {
 

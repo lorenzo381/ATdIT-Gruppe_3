@@ -41,7 +41,7 @@ public class ClassScreen extends JFrame {
     //SEVENTH
     JLabel timerJL, absentJL, timerHeadline, dateJL, absentNamesJL;
     String dateS;
-    ResourceBundle resourcebundle = ResourceBundle.getBundle("presentation");
+    ResourceBundle resourcebundle = ResourceBundle.getBundle("i18n/presentation");
 
 
     public ClassScreen() {
@@ -81,15 +81,15 @@ public class ClassScreen extends JFrame {
         fourJCB = new JCustomButton(DatabaseController.get(four).getFIRSTNAME(), four);
         fiveJCB = new JCustomButton(DatabaseController.get(five).getFIRSTNAME(), five);
 
-        AufrufListener al1 = new AufrufListener(fourJCB);
+        PickOnListener al1 = new PickOnListener(fourJCB);
         fourJCB.addMouseListener(al1);
         fourJCB.setBackground(Color.CYAN);
 
-        AufrufListener al4 = new AufrufListener(threeJCB);
+        PickOnListener al4 = new PickOnListener(threeJCB);
         threeJCB.addMouseListener(al4);
         threeJCB.setBackground(Color.CYAN);
 
-        AufrufListener al5 = new AufrufListener(fiveJCB);
+        PickOnListener al5 = new PickOnListener(fiveJCB);
         fiveJCB.addMouseListener(al5);
         fiveJCB.setBackground(Color.CYAN);
 
@@ -111,7 +111,7 @@ public class ClassScreen extends JFrame {
         sixJCB.setBackground(Color.cyan);
         secondJP.add(sixJCB);
 
-        AufrufListener al2 = new AufrufListener(sixJCB);
+        PickOnListener al2 = new PickOnListener(sixJCB);
 
         for (int i = 0; i < 5; i++) {
             acs = new addClassScreen();
@@ -163,7 +163,7 @@ public class ClassScreen extends JFrame {
         }
 
 
-        AufrufListener al3 = new AufrufListener(eightJCB);
+        PickOnListener al3 = new PickOnListener(eightJCB);
         eightJCB.addMouseListener(al3);
 
 

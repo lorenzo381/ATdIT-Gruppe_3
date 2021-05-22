@@ -11,14 +11,16 @@ import java.util.ResourceBundle;
 
 public class main {
 
+
     public static void main(String[] args) {
+
 
         DatabaseController.clearTable();
         DatabaseController.createTable();
 
         Student[] students = new Student[15];
         StudentData[] studentData = new StudentData[15];
-        ResourceBundle resourcebundle = ResourceBundle.getBundle("presentation");
+        ResourceBundle resourcebundle = ResourceBundle.getBundle("i18n/presentation");
 
         for(int i=0; i<15; i++) {
             students[i] = MockData.getMockStudent(resourcebundle.getString("Mathematik"));
