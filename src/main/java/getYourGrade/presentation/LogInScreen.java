@@ -3,6 +3,7 @@ package getYourGrade.presentation;
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
+import java.util.ResourceBundle;
 
 public class LogInScreen extends JFrame {
     JButton submitJB;
@@ -14,11 +15,12 @@ public class LogInScreen extends JFrame {
     ImageIcon account;
     JPanel textJP, boxJP, combinedJP, thirdRowSubmitJP;
     addJlToGridBackLayout addJl;
+    private ResourceBundle resourcebundle = ResourceBundle.getBundle("presentation");
 
 
     public LogInScreen() {
         setExtendedState(java.awt.Frame.MAXIMIZED_BOTH);
-        setTitle("LogInScreen");
+        setTitle(resourcebundle.getString("LogInScreen"));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setUndecorated(true);
 
@@ -49,9 +51,9 @@ public class LogInScreen extends JFrame {
         /*___________________________________________ 2 Reihe mit Feldern___________________________________________________*/
 
 
-        passwordJL = new JLabel("Password:");
+        passwordJL = new JLabel(resourcebundle.getString("Password"));
         passwordJL.setFont(new Font("SansSerif", Font.ITALIC, 24));
-        usernameJL = new JLabel("Username: ");
+        usernameJL = new JLabel(resourcebundle.getString("Username"));
         usernameJL.setFont(new Font("SansSerif", Font.ITALIC, 24));
 
         c.fill = GridBagConstraints.HORIZONTAL;
@@ -63,9 +65,9 @@ public class LogInScreen extends JFrame {
         c.gridx = 1;
         c.gridy = 2;
 
-        passwordJL = new JLabel("Password:");
+        passwordJL = new JLabel(resourcebundle.getString("Password"));
         passwordJL.setFont(new Font("SansSerif", Font.ITALIC, 24));
-        usernameJL = new JLabel("Username: ");
+        usernameJL = new JLabel(resourcebundle.getString("Username"));
         usernameJL.setFont(new Font("SansSerif", Font.ITALIC, 24));
 
 
@@ -104,7 +106,7 @@ public class LogInScreen extends JFrame {
 
         thirdRowSubmitJP = new JPanel();
         thirdRowSubmitJP.setBackground(Color.white);
-        submitJB = new JButton("Submit");
+        submitJB = new JButton(resourcebundle.getString("Submit"));
         submitJB.setPreferredSize(new Dimension(100, 40));
         submitJB.setBackground(Color.green);
         submitJB.setBorderPainted(false);
@@ -142,7 +144,7 @@ public class LogInScreen extends JFrame {
     }
 
     public void loginfailed() {
-        submitJB.setText("Login failed. Try again!");
+        submitJB.setText(resourcebundle.getString("Login failed. Try again!"));
         submitJB.setPreferredSize(new Dimension(200, 40));
         submitJB.setBackground(Color.red);
     }

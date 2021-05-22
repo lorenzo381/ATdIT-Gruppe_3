@@ -4,6 +4,7 @@ import getYourGrade.persistence.implementation.DatabaseController;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ResourceBundle;
 
 
 public class ClassScreen extends JFrame {
@@ -40,11 +41,12 @@ public class ClassScreen extends JFrame {
     //SEVENTH
     JLabel timerJL, absentJL, timerHeadline, dateJL, absentNamesJL;
     String dateS;
+    ResourceBundle resourcebundle = ResourceBundle.getBundle("presentation");
 
 
     public ClassScreen() {
         setExtendedState(MAXIMIZED_BOTH);
-        setTitle("ClassScreen");
+        setTitle(resourcebundle.getString("ClassScreen"));
         setUndecorated(true);
         pane = getContentPane();
         pane.setLayout(new GridLayout(1, 8));
@@ -55,7 +57,7 @@ public class ClassScreen extends JFrame {
         exitJP = new JPanel(new FlowLayout());
         exitJP.setBackground(Color.white);
         CloseClassScreenListener closeClassScreenListener = new CloseClassScreenListener(this);
-        exitClassJB = new JButton("Exit Class");
+        exitClassJB = new JButton(resourcebundle.getString("Exit Class"));
         exitClassJB.addActionListener(closeClassScreenListener);
         exitClassJB.setBackground(Color.green);
         exitClassJB.setPreferredSize(new Dimension(130, 40));
@@ -136,7 +138,7 @@ public class ClassScreen extends JFrame {
             acs.addWhiteJlToClassScreen(thirdJP);
         }
 
-        teacherJL = new JLabel("Teacher", JLabel.CENTER);
+        teacherJL = new JLabel(resourcebundle.getString("Teacher"), JLabel.CENTER);
         teacherJL.setForeground(Color.white);
         teacherJL.setBackground(Color.darkGray);
         teacherJL.setOpaque(true);
@@ -192,7 +194,7 @@ public class ClassScreen extends JFrame {
         sixthJP = new JPanel(new GridLayout(8, 1));
 
 
-        absentJL = new JLabel("Abwesend: ", JLabel.RIGHT);
+        absentJL = new JLabel(resourcebundle.getString("absent"), JLabel.RIGHT);
         absentJL.setForeground(Color.red);
         absentJL.setBackground(Color.white);
         absentJL.setOpaque(true);
@@ -223,7 +225,7 @@ public class ClassScreen extends JFrame {
         absentNamesJL.setForeground(Color.red);
         absentNamesJL.setBackground(gr);
         absentNamesJL.setOpaque(true);
-        timerHeadline = new JLabel("TIME LEFT:", JLabel.CENTER);
+        timerHeadline = new JLabel(resourcebundle.getString("Time left"), JLabel.CENTER);
         timerHeadline.setBackground(gr);
         timerHeadline.setOpaque(true);
 

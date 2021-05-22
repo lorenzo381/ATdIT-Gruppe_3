@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ResourceBundle;
 
 public class StudentGradeWindow extends JFrame {
 
@@ -14,6 +15,7 @@ public class StudentGradeWindow extends JFrame {
     ButtonGroup buttonGroup;
     JButton submitJB;
     int x,y;
+    ResourceBundle resourcebundle = ResourceBundle.getBundle("presentation");
 
 
     public StudentGradeWindow (JCustomButton jb) {

@@ -4,6 +4,7 @@ import getYourGrade.persistence.implementation.DatabaseController;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ResourceBundle;
 
 public class StudentOverviewScreen extends JFrame {
 
@@ -15,13 +16,14 @@ public class StudentOverviewScreen extends JFrame {
     JLabel jp , jlLASTNAME, jlFIRSTNAME, jlCourseName,  jlMissedDays, jlGrade;
     JLabel jlArray[] = {jlLASTNAME, jlFIRSTNAME, jlCourseName,  jlMissedDays, jlGrade};
 
+    ResourceBundle resourcebundle = ResourceBundle.getBundle("presentation");
+    String arrayDescriptions [] = {resourcebundle.getString("lastname"), resourcebundle.getString("firstname"), resourcebundle.getString( "course name"), resourcebundle.getString("missed days"),resourcebundle.getString( "grade")};
 
-    String arrayDescriptions [] = {"lastname", "firstname",  "course name", "missed days", "grade"};
 
     public StudentOverviewScreen() {
         setExtendedState(Frame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("StudentOverview");
+        setTitle(resourcebundle.getString("StudentOverview"));
         //setUndecorated(true);
 
         pane = getContentPane();
