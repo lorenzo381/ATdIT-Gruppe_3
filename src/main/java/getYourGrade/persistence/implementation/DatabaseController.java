@@ -1,5 +1,5 @@
 package getYourGrade.persistence.implementation;
-// Interface for database functionality
+
 
 import java.sql.*;
 
@@ -20,8 +20,7 @@ public class DatabaseController {
         return conn;
     }
 
-    public static void createTable() {            //Datenbank kreieren
-
+    public static void createTable() {
         String sql = """
                 CREATE TABLE IF NOT EXISTS student (     
                 	ID integer PRIMARY KEY NOT NULL,
@@ -45,7 +44,7 @@ public class DatabaseController {
 
     }
 
-    public static void execute(Connection conn, String sql) {     //führt universal alles mögliche aus
+    public static void execute(Connection conn, String sql) {
         try {
             Statement stmt = conn.createStatement();
 
@@ -90,7 +89,7 @@ public class DatabaseController {
         return rueckgabestudent;
     }
 
-    public static void createStudent(StudentData student) {    // Submit Button Vorlage für Note in Datenbankeintrag übertragen
+    public static void createStudent(StudentData student) {
         String sql = "INSERT INTO student(ID, LASTNAME, FIRSTNAME, courseName, missedDays, grade) VALUES(?,?,?,?,?,?)";
 
         Connection conn = connect();
