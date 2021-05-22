@@ -44,7 +44,7 @@ public class StudentGradeWindow extends JFrame {
                 jb.setBackground(null);
 
                 if(veryWellJRB.isSelected()) {
-                    System.out.println(resourcebundle.getString("VERYWELL"));
+                    System.out.println(resourcebundle.getString("VERY WELL"));
                     System.out.println();
                     DatabaseController.setGrade(jb.getID(),1);
                 }
@@ -84,10 +84,10 @@ public class StudentGradeWindow extends JFrame {
 
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); //DISPOSE_ON_CLOSE schließt nur neues fenster, EXIT_ON_CLOSE würde auch die pane schließen
 
-        veryWellJRB = new JRadioButton("VERY WELL");
-        wellJRB = new JRadioButton("WELL");
-        acceptableJRB = new JRadioButton("ACCEPTABLE");
-        notEnoughJRB = new JRadioButton("NOT ENOUGH");
+        veryWellJRB = new JRadioButton(resourcebundle.getString("VERY WELL"));
+        wellJRB = new JRadioButton(resourcebundle.getString("WELL"));
+        acceptableJRB = new JRadioButton(resourcebundle.getString("ACCEPTABLE"));
+        notEnoughJRB = new JRadioButton(resourcebundle.getString("NOT ENOUGH"));
 
         buttonGroup = new ButtonGroup();
         buttonGroup.add(veryWellJRB);
