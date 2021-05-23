@@ -4,6 +4,10 @@ import getYourGrade.persistence.implementation.DatabaseController;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ResourceBundle;
 
 
@@ -302,6 +306,41 @@ public class ClassScreen extends JFrame {
 
     public void closeFrame() {
         this.dispose();
+    }
+
+    public class CloseClassScreenListener implements ActionListener {
+        ClassScreen classscreen;
+        StudentOverviewScreen so;
+
+        public CloseClassScreenListener(ClassScreen classscreen) {
+            this.classscreen = classscreen;
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            classscreen.closeFrame();
+            so = new StudentOverviewScreen();
+
+        }
+
+    }
+
+    public class PickOnListener extends MouseAdapter {
+        StudentGradeWindow sg;
+        JCustomButton jb;
+
+
+        public PickOnListener(JCustomButton jb) {
+            this.jb = jb;
+
+        }
+
+        public void mouseClicked(MouseEvent e) {
+
+
+            sg = new StudentGradeWindow(jb);
+
+        }
     }
 
 }
