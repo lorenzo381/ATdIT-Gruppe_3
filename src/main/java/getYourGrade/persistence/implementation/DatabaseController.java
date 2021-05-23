@@ -50,6 +50,7 @@ public class DatabaseController {
 
             stmt.execute(sql);
             System.out.println(sql + " Befehl erfolgreich ausgeführt! ");
+
         } catch (SQLException e) {
             System.out.println(e.getMessage());
             System.out.println(" Execution failed.");
@@ -78,6 +79,7 @@ public class DatabaseController {
                 rueckgabestudent.setCourseName(rs.getString("courseName"));
                 rueckgabestudent.setMissedDays(rs.getInt("missedDays"));
                 rueckgabestudent.setGrade(rs.getInt("grade"));
+                conn.close();
 
             }
         } catch (SQLException e) {
@@ -102,6 +104,7 @@ public class DatabaseController {
             pstmt.setInt(5, student.getMissedDays());
             pstmt.setInt(6, student.getGrade());
             pstmt.executeUpdate();
+            conn.close();
 
 
         } catch (SQLException e) {
@@ -121,12 +124,14 @@ public class DatabaseController {
             pstmt.setInt(2, ID);
 
             pstmt.executeUpdate();
+            conn.close();
 
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
 
         }
+
 
     }
 
