@@ -7,20 +7,13 @@ public class JCustomButton extends JButton {
     String text;
 
 
-    JCustomButton (String text, int ID) {
+    JCustomButton(String text, int ID) {
         super(text);
         this.ID = ID;
 
     }
 
-
-
-
-    public int getID() {
-        return  ID;
-    }
-
-    public static void main (String [] args) {
+    public static void main(String[] args) {
         JCustomButton jcb = new JCustomButton("Hallo", 4);
         System.out.println(jcb.getText());
         System.out.println(jcb.getID());
@@ -28,5 +21,9 @@ public class JCustomButton extends JButton {
 
     }
 
-
+    public int getID() {
+        return ID;
     }
+
+
+}

@@ -21,13 +21,13 @@ public class TimerCountdown {
         date = new Date();
         dateS = dateFormat.format(date);
         Calendar calendar = Calendar.getInstance(TimeZone.getTimeZone("CEST"));
-        calendar.set(Calendar.HOUR_OF_DAY, 18);// for 6 hour
-        calendar.set(Calendar.MINUTE, 0);// for 0 min
-        calendar.set(Calendar.SECOND, 0);// for 0 sec
-        calendar.set(2021, Calendar.MAY, 7);// for Date [year,month(0 to 11), date]
+        calendar.set(Calendar.HOUR_OF_DAY, 18);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(2021, Calendar.MAY, 7);
 
         long endOfLesson = calendar.getTimeInMillis();
-        //long endOfLesson = System.currentTimeMillis() + 1000*60*45;
+
 
         Timer timer = new Timer(1000, new ActionListener() {
             @Override
@@ -36,7 +36,8 @@ public class TimerCountdown {
                 long delta = endOfLesson - System.currentTimeMillis();
                 timerJL.setText(sdf.format(new Date(delta)));
             }
-        });
+        }
+        );
         timer.start();
     }
 }

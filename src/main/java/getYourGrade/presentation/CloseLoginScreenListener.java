@@ -9,10 +9,10 @@ class CloseLoginScreenListener implements ActionListener {
     JPasswordField passwordField;
     JTextField textField;
     String passwordString;
-LogInScreen logInScreen;
-ClassScreen classScreen;
+    LogInScreen logInScreen;
+    ClassScreen classScreen;
 
-    public CloseLoginScreenListener(LogInScreen loginScreen,JPasswordField passwordField, JTextField textField) {
+    public CloseLoginScreenListener(LogInScreen loginScreen, JPasswordField passwordField, JTextField textField) {
         this.textField = textField;
         this.passwordField = passwordField;
         this.logInScreen = loginScreen;
@@ -26,14 +26,13 @@ ClassScreen classScreen;
         System.out.println("passwordString");
         this.passwordString = new String(passwordField.getPassword());
         if (passwordString.equals("Password")) {
-            System.out.println("succesful"); // hier hätte ich gerne eine kurze Verzögerung
+            System.out.println("succesful");
             logInScreen.closeFrame();
             classScreen = new ClassScreen();
 
 
         } else {
             logInScreen.loginfailed();
-            //System.out.println(passwordField.getPassword());
 
         }
 

@@ -12,35 +12,35 @@ public class StudentOverviewScreen extends JFrame {
     JPanel white, description;
 
     JPanel zero, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen;
-    JPanel jpArray [] = {zero, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen};
-    JLabel jp , jlLASTNAME, jlFIRSTNAME, jlCourseName,  jlMissedDays, jlGrade;
-    JLabel jlArray[] = {jlLASTNAME, jlFIRSTNAME, jlCourseName,  jlMissedDays, jlGrade};
+    JPanel jpArray[] = {zero, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen};
+    JLabel jp, jlLASTNAME, jlFIRSTNAME, jlCourseName, jlMissedDays, jlGrade;
+    JLabel jlArray[] = {jlLASTNAME, jlFIRSTNAME, jlCourseName, jlMissedDays, jlGrade};
 
     ResourceBundle resourcebundle = ResourceBundle.getBundle("i18n/presentation");
-    String arrayDescriptions [] = {resourcebundle.getString("lastname"), resourcebundle.getString("firstname"), resourcebundle.getString( "course name"), resourcebundle.getString("missed days"),resourcebundle.getString( "grade")};
+    String arrayDescriptions[] = {resourcebundle.getString("lastname"), resourcebundle.getString("firstname"), resourcebundle.getString("course name"), resourcebundle.getString("missed days"), resourcebundle.getString("grade")};
 
 
     public StudentOverviewScreen() {
         setExtendedState(Frame.MAXIMIZED_BOTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle(resourcebundle.getString("StudentOverview"));
-        //setUndecorated(true);
+
 
         pane = getContentPane();
-        pane.setLayout(new GridLayout(20,1));
+        pane.setLayout(new GridLayout(20, 1));
 
         white = new JPanel();
         white.setBackground(Color.white);
         pane.add(white);
 
-        description = new JPanel(new GridLayout(1,5));
+        description = new JPanel(new GridLayout(1, 5));
 
-        for (int i = 0; i<arrayDescriptions.length; i++) {
+        for (int i = 0; i < arrayDescriptions.length; i++) {
             jp = new JLabel(arrayDescriptions[i], JLabel.CENTER);
             jp.setBackground(Color.gray);
             jp.setForeground(Color.white);
             jp.setOpaque(true);
-            jp.setBorder(BorderFactory.createMatteBorder(0,1,2,1, Color.white));
+            jp.setBorder(BorderFactory.createMatteBorder(0, 1, 2, 1, Color.white));
             description.add(jp);
 
         }
@@ -49,12 +49,9 @@ public class StudentOverviewScreen extends JFrame {
         System.out.println(jpArray.length);
 
 
-
-
-
-        for (int i=0; i<jpArray.length; i++) {
+        for (int i = 0; i < jpArray.length; i++) {
             jpArray[i] = new JPanel();
-            jpArray[i].setLayout(new GridLayout(1,5));
+            jpArray[i].setLayout(new GridLayout(1, 5));
 
             jlLASTNAME = new JLabel(DatabaseController.get(i).getLASTNAME());
             jlFIRSTNAME = new JLabel(DatabaseController.get(i).getFIRSTNAME());
@@ -81,27 +78,20 @@ public class StudentOverviewScreen extends JFrame {
             jlMissedDays.setBorder(BorderFactory.createMatteBorder(0, 1, 2, 1, Color.lightGray));
             jlGrade.setBorder(BorderFactory.createMatteBorder(0, 1, 2, 1, Color.lightGray));
 
-            jpArray[i].add(  jlLASTNAME);
-            jpArray[i].add(  jlFIRSTNAME);
-            jpArray[i].add(  jlCourseName);
-            jpArray[i].add(  jlMissedDays);
-            jpArray[i].add(  jlGrade);
+            jpArray[i].add(jlLASTNAME);
+            jpArray[i].add(jlFIRSTNAME);
+            jpArray[i].add(jlCourseName);
+            jpArray[i].add(jlMissedDays);
+            jpArray[i].add(jlGrade);
 
 
             pane.add(jpArray[i]);
 
-                 }
-
-
-
+        }
 
 
         setVisible(true);
     }
 
-    public static void main(String[] args) {
-        StudentOverviewScreen so = new StudentOverviewScreen();
 
-
-    }
 }

@@ -28,6 +28,9 @@ public class main {
             DatabaseController.createStudent(studentData[i]);
         }
 
+
+
+
         LogInScreen ls = new LogInScreen();
     }
 }

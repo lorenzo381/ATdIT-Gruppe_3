@@ -103,9 +103,11 @@ public class DatabaseController {
             pstmt.setInt(6, student.getGrade());
             pstmt.executeUpdate();
 
+
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+
     }
 
     public static void setGrade(int ID, int value) {
@@ -120,9 +122,13 @@ public class DatabaseController {
 
             pstmt.executeUpdate();
 
+
         } catch (SQLException e) {
             System.out.println(e.getMessage());
 
         }
+
     }
+
+
 }
