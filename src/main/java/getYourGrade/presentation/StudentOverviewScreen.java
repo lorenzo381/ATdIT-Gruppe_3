@@ -6,6 +6,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ResourceBundle;
 
+/**
+ * This class creates the OverviewScreen, this view provides the teacher with all the information he needs to know about the students.
+ * This informtaions are last name, first name, course name, missed days and the current grade
+ *
+ * @author Luca Isaak
+ * @version 24.05.2021
+ */
+
 public class StudentOverviewScreen extends JFrame {
 
     Container pane;

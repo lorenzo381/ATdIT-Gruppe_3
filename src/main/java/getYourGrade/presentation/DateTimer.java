@@ -7,6 +7,13 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * the DateTimer makes sure the Date and the time on the ClassScreen are up-to-date
+ *
+ * @author Luca Isaak
+ * @version 24.05.2021
+ */
+
 public class DateTimer {
     DateFormat dateFormat;
     Date date;

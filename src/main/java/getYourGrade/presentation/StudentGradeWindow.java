@@ -8,6 +8,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ResourceBundle;
 
+/**
+ * this class creates the StudentOverview Screen, where the teacher can select a grade for what the student said.
+ * He can select WELL, VERY WELL, ACCEPTABLE and NOT ENOUGH.
+ * He has to click on the submit Button to enter the grade in the DataBase.
+ *
+ * @author Luca Isaak
+ * @version 24.05.2021
+ */
 public class StudentGradeWindow extends JFrame {
 
     Container pane;
@@ -36,7 +44,12 @@ public class StudentGradeWindow extends JFrame {
 
         submitJB = new JButton(resourcebundle.getString("Submit"));
         submitJB.setBackground(Color.green);
+
+
         ActionListener al = new ActionListener() {
+            /**
+             * this method enters the selected grade in the Database
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 closeFrame();

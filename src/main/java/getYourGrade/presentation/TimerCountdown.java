@@ -9,6 +9,13 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
+/**
+ * Thiss Class is resposible for the timer on the ClassScreen. It helps the teacher to see how much time is left.
+ *
+ * @author Luca isaak
+ * @version 24.05.2021
+ */
+
 public class TimerCountdown {
     JLabel timerJL;
     DateFormat dateFormat;

@@ -10,8 +10,17 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ResourceBundle;
 
+/**
+ * The ClassScreen shows the seating plan. If a student raises his hand, his "table"/ field changes the colour to a blue.
+ * The Teacher can pick a student on, by clicking on the coloured field.
+ * This Click opens the StudentGradeWindow, where the teacher can grade a student.
+ *
+ * @author Luca isaak
+ * @version 24.05.2021
+ */
 
 public class ClassScreen extends JFrame {
+
 
     Container pane;
     JPanel zeroJP, firstJP, secondJP, thirdJP, fourthJP, fifthJP, sixthJP, seventhJP;
@@ -250,10 +259,9 @@ public class ClassScreen extends JFrame {
         setVisible(true);
     }
 
-    public static void main(String[] args) {
-        ClassScreen cs = new ClassScreen();
-
-    }
+    /**
+     * this method adds the board to the Class Screen. It creates a white JLabel on top of a green JLabel
+     */
 
     public static void addBordJpToClassScreen(JPanel jp) {
         Color gr = new Color(0, 60, 0);
@@ -274,6 +282,10 @@ public class ClassScreen extends JFrame {
 
     }
 
+    /**
+     * this method adds a white JLabel to the ClassScreen
+     */
+
     public void addWhiteJlToClassScreen(JPanel jp) {
 
 
@@ -283,6 +295,10 @@ public class ClassScreen extends JFrame {
         jp.add(jl);
 
     }
+
+    /**
+     * this method adds the board to the Class Screen. It creates a white JLabel on top of a green JLabel with the additional String "Board"
+     */
 
     public void addBordWithTextJpToClassScreen(JPanel jp) {
         Color gr = new Color(0, 60, 0);
@@ -308,6 +324,9 @@ public class ClassScreen extends JFrame {
         this.dispose();
     }
 
+    /**
+     * if you click on the "Exit Class" Button, the ClassScreen will close and the next window, StudentOverviewScreen will open
+     */
     public class CloseClassScreenListener implements ActionListener {
         ClassScreen classscreen;
         StudentOverviewScreen so;
@@ -324,6 +343,11 @@ public class ClassScreen extends JFrame {
         }
 
     }
+
+    /**
+     * this method opens the StudentGradeWindow if the teacher clicks on the/ picks on a student.
+     * In the StudentGradeWindow teacher can evaluate what the student said
+     */
 
     public class PickOnListener extends MouseAdapter {
         StudentGradeWindow sg;

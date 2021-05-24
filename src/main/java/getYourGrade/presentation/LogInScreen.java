@@ -7,6 +7,14 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.ResourceBundle;
 
+/**
+ * This class creates the LoginScreen, for a succesful login you have to
+ * type in a password which is "Password"
+ *
+ * @author Luca Isaak
+ * @version 24.05.2021
+ */
+
 public class LogInScreen extends JFrame {
     JButton submitJB;
     JPasswordField passwordField;
@@ -132,19 +140,31 @@ public class LogInScreen extends JFrame {
         setVisible(true);
     }
 
-    public static void addJlHorizontalToGridBackLayout(Container pane, GridBagConstraints c, JLabel jlabel, int gridX, int gridY, double weightX, double weightY, int gridWith, int ipady, Color colour) {
+    /**
+     * adds a JLabel to the LogInScreen
+     *
+     * @param gridX     x coordinate of the top left corner
+     * @param gridY     y coordinate of the top left corner
+     * @param gridWidth width of the JLabel
+     * @param colour    colour of the JLabel
+     */
+    public static void addJlHorizontalToGridBackLayout(Container pane, GridBagConstraints c, JLabel jlabel, int gridX, int gridY, double weightX, double weightY, int gridWidth, int ipady, Color colour) {
         jlabel.setOpaque(true);
         jlabel.setBackground(colour);
         c.fill = GridBagConstraints.HORIZONTAL;
         c.weightx = weightX;
         c.weighty = weightY;
-        c.gridwidth = gridWith;
+        c.gridwidth = gridWidth;
         c.gridx = gridX;
         c.gridy = gridY;
         c.ipady = ipady;
         pane.add(jlabel, c);
 
     }
+
+    /**
+     * adds a JLabel with an icon to the LogInScreen
+     */
 
     public static void addJlWithIconHorizontalToGridBackLayout(Container pane, GridBagConstraints c, ImageIcon icon, int iconWidh, int iconHeight,/* JLabel jlabel ,*/ int gridX, int gridY, double weightX, double weightY, int gridWith, int ipady, Color colour) {
         JLabel jlabel;
@@ -174,6 +194,9 @@ public class LogInScreen extends JFrame {
         submitJB.setBackground(Color.red);
     }
 
+    /**
+     * listener to close the LogInScreen
+     */
 
     public class CloseLoginScreenListener implements ActionListener {
 
@@ -183,6 +206,7 @@ public class LogInScreen extends JFrame {
         LogInScreen logInScreen;
         ClassScreen classScreen;
 
+
         public CloseLoginScreenListener(LogInScreen loginScreen, JPasswordField passwordField, JTextField textField) {
             this.textField = textField;
             this.passwordField = passwordField;
@@ -190,6 +214,9 @@ public class LogInScreen extends JFrame {
 
         }
 
+        /**
+         * ckecks the password, if it is right it will close the LonOnScreen, and if its is wrong you have to try it again
+         */
         @Override
         public void actionPerformed(ActionEvent e) {
             System.out.println("passwordString");
