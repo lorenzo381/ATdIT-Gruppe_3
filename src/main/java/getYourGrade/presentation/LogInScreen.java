@@ -16,7 +16,7 @@ public class LogInScreen extends JFrame {
     GridBagConstraints c;
     ImageIcon account;
     JPanel textJP, boxJP, combinedJP, thirdRowSubmitJP;
-    addJlToGridBackLayout addJl;
+
     private ResourceBundle resourcebundle = ResourceBundle.getBundle("i18n/presentation");
 
 
@@ -35,8 +35,8 @@ public class LogInScreen extends JFrame {
         /*______________________________________________________________________0.Reihe_____________________________________*/
 
         zerothRowJL = new JLabel();
-        addJl = new addJlToGridBackLayout();
-        addJl.addJlHorizontalToGridBackLayout(pane, c, zerothRowJL, 0, 0, 1, 3, 5, 200, Color.white);
+
+       addJlHorizontalToGridBackLayout(pane, c, zerothRowJL, 0, 0, 1, 3, 5, 200, Color.white);
 
 
 
@@ -44,8 +44,8 @@ public class LogInScreen extends JFrame {
         /*___________________________________________1. Reihe Mit Logo______________________________________________________*/
 
         account = new ImageIcon(new File("./src/main/resources/images/account.png").getPath());
-        addJl = new addJlToGridBackLayout();
-        addJl.addJlWithIconHorizontalToGridBackLayout(pane, c, account, 225, 225, 1, 1, 0.5, 1, 1, 200, Color.white);
+
+        addJlWithIconHorizontalToGridBackLayout(pane, c, account, 225, 225, 1, 1, 0.5, 1, 1, 200, Color.white);
 
 
 
@@ -95,15 +95,13 @@ public class LogInScreen extends JFrame {
 
         //PLATZHALTER NACH RECHTS
         secondRowRightJL = new JLabel();
-        addJl = new addJlToGridBackLayout();
-        addJl.addJlHorizontalToGridBackLayout(pane, c, secondRowRightJL, 2, 2, 1.7, 1, 1, 200, Color.white);
+        addJlHorizontalToGridBackLayout(pane, c, secondRowRightJL, 2, 2, 1.7, 1, 1, 200, Color.white);
 
 
         /*______________________________________________3. Reihe____________________________________________________________*/
         //PLATZHALTER NACH LINKS
         thirdRowLeftJL = new JLabel();
-        addJl = new addJlToGridBackLayout();
-        addJl.addJlHorizontalToGridBackLayout(pane, c, thirdRowLeftJL, 0, 3, 1.7, 1, 1, 200, Color.white);
+        addJlHorizontalToGridBackLayout(pane, c, thirdRowLeftJL, 0, 3, 1.7, 1, 1, 200, Color.white);
 
 
         thirdRowSubmitJP = new JPanel();
@@ -128,8 +126,7 @@ public class LogInScreen extends JFrame {
 
         /*____________________________________________4. Reihe______________________________________________________________*/
         fourthRowJL = new JLabel();
-        addJl = new addJlToGridBackLayout();
-        addJl.addJlHorizontalToGridBackLayout(pane, c, fourthRowJL, 0, 4, 1, 15, 5, 200, Color.white);
+        addJlHorizontalToGridBackLayout(pane, c, fourthRowJL, 0, 4, 1, 15, 5, 200, Color.white);
 
 
         setVisible(true);

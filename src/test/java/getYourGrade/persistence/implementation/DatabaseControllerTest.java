@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DatabaseControllerTest {
 
-//Run JUnit tests individually
+
 
     @Test
     public void testCreateStudent() {
