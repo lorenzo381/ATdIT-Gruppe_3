@@ -6,10 +6,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * The class DatabaseControllerTest checks the class DatabaseController for its correct functionality.
+ * The class DatabaseControllerTest checks class DatabaseController for correct functionality of its methods.
  *
  * @version : 24.05.2021
- * @author: Jonas Jamin
+ * @author : Jonas Jamin
  **/
 
 public class DatabaseControllerTest {

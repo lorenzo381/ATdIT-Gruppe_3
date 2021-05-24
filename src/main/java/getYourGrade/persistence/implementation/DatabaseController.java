@@ -6,7 +6,7 @@ import java.sql.*;
  * The class DatabaseController manages the essential functions of the database used in the project.
  *
  * @version : 24.05.2021
- * @author: Jonas Jamin
+ * @author : Jonas Jamin
  **/
 
 public class DatabaseController {
