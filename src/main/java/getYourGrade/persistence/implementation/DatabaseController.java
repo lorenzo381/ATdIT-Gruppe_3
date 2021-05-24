@@ -49,7 +49,7 @@ public class DatabaseController {
             Statement stmt = conn.createStatement();
 
             stmt.execute(sql);
-            System.out.println(sql + " Befehl erfolgreich ausgeführt! ");
+            System.out.println(sql + " Command executed successfully ");
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -109,6 +109,7 @@ public class DatabaseController {
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            System.out.println(" Creating student failed. ");
         }
 
     }
@@ -129,6 +130,7 @@ public class DatabaseController {
 
         } catch (SQLException e) {
             System.out.println(e.getMessage());
+            System.out.println(" Updating grade failed. ");
 
         }
 
