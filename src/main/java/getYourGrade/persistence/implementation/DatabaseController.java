@@ -1,12 +1,23 @@
 package getYourGrade.persistence.implementation;
 
-
 import java.sql.*;
+
+/** The class DatabaseController manages the essential functions of the database used in the project.
+ *
+ * @author: Jonas Jamin
+ * @version : 24.05.2021
+ **/
 
 public class DatabaseController {
 
+    /**
+     * Defining data path for database file.
+     **/
     public static final String location = "jdbc:sqlite:src/main/resources/database/db.sqlite";
 
+    /**
+     * Connecting database to program. Creating java object 'conn' that represents the database.
+     **/
     public static Connection connect() {
 
         Connection conn = null;
@@ -20,6 +31,9 @@ public class DatabaseController {
         return conn;
     }
 
+    /**
+     * Actually creating the database with its columns. Using JDBC application.
+     **/
     public static void createTable() {
         String sql = """
                 CREATE TABLE IF NOT EXISTS student (     
@@ -36,6 +50,9 @@ public class DatabaseController {
 
     }
 
+    /**
+     * Data from database gets fully cleared.
+     **/
     public static void clearTable() {
 
         String sql = "DELETE FROM student";
@@ -44,6 +61,9 @@ public class DatabaseController {
 
     }
 
+    /**
+     * Executes orders of any kind if requested by other methods, working with given transfer parameters.
+     **/
     public static void execute(Connection conn, String sql) {
         try {
             Statement stmt = conn.createStatement();
@@ -60,6 +80,9 @@ public class DatabaseController {
 
     }
 
+    /**
+     * Receiving in database listed data for the requested student. Creating java object 'rueckgabestudent' to deliver the data from database.
+     **/
     public static StudentData get(int ID) {
         String sql = "SELECT ID, LASTNAME, FIRSTNAME, courseName, missedDays, grade FROM student WHERE ID = ?";
         Connection conn = connect();
@@ -91,6 +114,9 @@ public class DatabaseController {
         return rueckgabestudent;
     }
 
+    /**
+     * Creating database entries (students), filling their columns with data.
+     **/
     public static void createStudent(StudentData student) {
         String sql = "INSERT INTO student(ID, LASTNAME, FIRSTNAME, courseName, missedDays, grade) VALUES(?,?,?,?,?,?)";
 
@@ -114,6 +140,9 @@ public class DatabaseController {
 
     }
 
+    /**
+     * Changing data in column 'grade' for a specific entry (student) in the database.
+     **/
     public static void setGrade(int ID, int value) {
 
         String sql = "UPDATE student SET grade = ? WHERE ID = ?";
