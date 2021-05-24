@@ -2,10 +2,11 @@ package getYourGrade.persistence.implementation;
 
 import java.sql.*;
 
-/** The class DatabaseController manages the essential functions of the database used in the project.
+/**
+ * The class DatabaseController manages the essential functions of the database used in the project.
  *
- * @author: Jonas Jamin
  * @version : 24.05.2021
+ * @author: Jonas Jamin
  **/
 
 public class DatabaseController {
