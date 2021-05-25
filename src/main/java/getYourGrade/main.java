@@ -12,6 +12,7 @@ import getYourGrade.persistence.implementation.DatabaseController;
 import getYourGrade.persistence.implementation.StudentData;
 import getYourGrade.presentation.LogInScreen;
 
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 
@@ -24,6 +25,7 @@ public class main {
      * @param args (default parameter of main method in JAVA)
      */
     public static void main(String[] args) {
+        Locale.setDefault(Locale.GERMAN);
 
 
         DatabaseController.clearTable();
